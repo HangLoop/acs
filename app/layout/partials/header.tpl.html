@@ -1,9 +1,13 @@
-<header id="header">
+<header id="header" ng-controller="datCtrl">
 
     <div id="hide-menu" class="btn-header">
         <span> <a toggle-menu title="Collapse Menu"><i
                 class="fa fa-reorder"></i></a> </span>
     </div>
+
+<div id="header-date">
+<h2>{{ today | date : "d MMMM y, EEE" }}</h2>
+</div>
 
 <div id="logo-group">
     <!-- collapse menu button -->
@@ -28,7 +32,6 @@
 
 <!-- pulled right: nav area -->
 <div class="pull-right">
-
     <!-- #MOBILE -->
     <!-- Top menu profile link : this shows only when top menu is active -->
     <!--<ul id="mobile-profile-img" class="header-dropdown-list hidden-xs padding-5">
@@ -110,12 +113,16 @@
         <a href="$" id="cancel-search-js" title="Cancel Search"><i class="fa fa-times"></i></a>
     </form>-->
     <!-- end input: search field -->
+    
+    <div id="header-time" class="pull right">
+        <h2>{{ today | date :  "h:mm a" }}</h2>
+    </div>
 
     <!-- fullscreen button -->
-    <div id="fullscreen" class="btn-header transparent pull-right">
+    <!--<div id="fullscreen" class="btn-header transparent pull-right">
         <span> <a full-screen title="Full Screen"><i
                 class="fa fa-arrows-alt"></i></a> </span>
-    </div>
+    </div>-->
     <!-- end fullscreen button -->
 
 

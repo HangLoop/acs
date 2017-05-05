@@ -19,3 +19,7 @@ angular.module('app.layout', ['ui.router'])
 
 })
 
+.controller('datCtrl', function($scope) {
+    $scope.today = new Date();
+});
+

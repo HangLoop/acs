@@ -22,6 +22,17 @@
 	box-sizing: border-box;
 }
 
+#header-date {
+	float: left;
+	margin-left: 15px;
+	color: #812990;
+}
+
+#header-time {
+	margin-left: 15px;
+	color: #812990;
+}
+
  #hide-menu {
  	width: 30px !important;
  }
@@ -37,6 +48,27 @@
 	border-right: 1px solid #C8C8C8;
 }
 
+.map-dashboard .ui-datepicker {
+	width: 100%;
+}
+
+.map-dashboard .ui-widget-content {
+	border: 0;
+}
+
+.map-dashboard .ui-datepicker .ui-datepicker-header {
+	color: #333;
+	line-height: 100%;
+	font-size: 18px;
+	background: #FFF;
+}
+
+.map-dashboard .ui-widget-header a {
+	color: #812990;
+	line-height: 100%;
+	font-size: 18px;
+}
+
 .map-dashboard header {
 	color: #812990;
 }
@@ -46,7 +78,7 @@
 }
 
 .map-dashboard .action .btn-action {
-	width: 230px;
+	width: 100%;
 	background: #812990;
 }
 
@@ -71,9 +103,8 @@
 	font-size: 20px;
 }
 
-.map-dashboard .map-filter-container .btn-selected {
-	background: #812990;
-	color: #FFF;
+.map-dashboard .map-filter-container .map-machine-status {
+	width: 20%;
 }
 
 .map-dashboard .map-filter-container .btn-normal {
@@ -82,6 +113,10 @@
 	border: 1px solid #ccc;
 }
 
+.map-dashboard .map-filter-container ul li .btn-selected {
+	background: #812990;
+	color: #FFF;
+}
 
 #date-picker {
 	color: #812990;
@@ -96,5 +131,13 @@
 
 .map-dashboard .map-filter-container div ul li a{
 	margin-left: 5px;
-	width: 150px;
+	min-width: 75%;
+}
+
+.map-dashboard .map #beacon-map {
+	text-align: center;
+}
+
+.map-dashboard .map #beacon-map a {
+	float: right;
 }

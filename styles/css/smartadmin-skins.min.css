@@ -1664,11 +1664,11 @@ body.smart-style-4 {
 }
 
 .smart-style-4 #content>.row:first-child {
-    background-color: #f7f7f9;
+    background-color: #fff;
     margin-top: -10px;
     padding-top: 10px;
-    margin-bottom: 13px;
-    padding-bottom: 7px;
+    /*margin-bottom: 13px;
+    padding-bottom: 7px;*/
     border-bottom: 1px solid #d9dbe4
 }
 
