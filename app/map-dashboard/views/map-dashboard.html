@@ -1,0 +1,138 @@
+<!-- MAIN CONTENT -->
+<div class="map-dashboard" id="content">
+    <!-- widget grid -->
+    <section id="widget-grid" widget-grid>
+        <!-- row -->
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-2 left-side-bar">
+                <div class="action">
+                    <header>
+                        <h2><i class="fa fa-flag"></i> Action</h2>
+                    </header>
+                    <a href-void class="btn btn-action txt-color-white"><i class="fa fa-chain-broken"></i> Register Guest</a>
+                    <br>
+                    <br>
+                    <a href-void class="btn btn-action txt-color-white"><i class="fa fa-search"></i> Booking Enquiries</a>
+                </div>
+                <div class="date">
+                    <header>
+                        <h2><i class="fa fa-calendar"></i> Date</h2>
+                    </header>
+                    <div id="datepicker" data-smart-datepicker options="datepickerOptions" data-date-format="dd/mm/yy"></div>
+                    <h2><i class="fa fa-calendar-check-o"></i> Confirmed Booking 30</h2>
+                    <h2><i class="fa fa-heart-o"></i> Available Therapist 15</h2>
+                </div>
+                <div class="Notification">
+                    <header>
+                        <h2><i class="fa fa-bell"></i> Notification</h2>
+                    </header>
+                    <div class="chat-body no-padding profile-message">
+                        <ul>
+                            <li class="message">
+                                <img src="styles/img/avatars/sunny.png" class="online" alt="sunny" height="42" width="42">
+                                <span class="message-text"> <a href-void class="username">MAID: HAPPY CHAN
+                                            <small class="text-muted pull-right ultra-light"> 2 Minutes ago</small></a>
+                                            Finished Clean Up for RM59</span>
+                            </li>
+                            <li class="message">
+                                <img src="styles/img/avatars/sunny.png" class="online" alt="sunny" height="42" width="42">
+                                <span class="message-text"> <a href-void class="username">MAID: HAPPY CHAN
+                                            <small class="text-muted pull-right ultra-light"> 2 Minutes ago</small></a>
+                                            Finished Clean Up for RM59</span>
+                            </li>
+                            <li class="message">
+                                <img src="styles/img/avatars/sunny.png" class="online" alt="sunny" height="42" width="42">
+                                <span class="message-text"> <a href-void class="username">MAID: HAPPY CHAN
+                                            <small class="text-muted pull-right ultra-light"> 2 Minutes ago</small></a>
+                                            Finished Clean Up for RM59</span>
+                            </li>
+                            <li class="message">
+                                <img src="styles/img/avatars/sunny.png" class="online" alt="sunny" height="42" width="42">
+                                <span class="message-text"> <a href-void class="username">MAID: HAPPY CHAN
+                                            <small class="text-muted pull-right ultra-light"> 2 Minutes ago</small></a>
+                                            Finished Clean Up for RM59</span>
+                            </li>
+                            <li class="message">
+                                <img src="styles/img/avatars/sunny.png" class="online" alt="sunny" height="42" width="42">
+                                <span class="message-text"> <a href-void class="username">MAID: HAPPY CHAN
+                                            <small class="text-muted pull-right ultra-light"> 2 Minutes ago</small></a>
+                                            Finished Clean Up for RM59</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <article class="col-sm-12 col-md-12 col-lg-10">
+                <div class="map-filter">
+                    <header>
+                        <h2><i class="fa fa-map-marker"></i> Display MAP by</h2>
+                    </header>
+                    <div class="map-filter-container">
+                        <div class="map-date">
+                            <ul>
+                                <li>Date</li>
+                                <li id="date-picker">{{picked-date||"TODAY"}}</li>
+                                <li>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input class="form-control" data-smart-clockpicker type="text" placeholder="From" data-autoclose="true">
+                                            <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input class="form-control" data-smart-clockpicker type="text" placeholder="To" data-autoclose="true">
+                                            <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="map-room-status">
+                            <ul>
+                                <li>Room Status</li>
+                                <li><i class="fa fa-ban fa-fw txt-color-red"></i><a href-void class="btn btn-selected bg-color-magenta txt-color-white">Occupied</a></li>
+                                <li><i class="fa fa-paint-brush fa-fw"></i><a href-void class="btn btn-normal">Ready for Clean</a></li>
+                                <li><i class="fa fa-star fa-fw"></i><a href-void class="btn btn-normal">Available</a></li>
+                            </ul>
+                        </div>
+                        <div class="map-guest-status">
+                            <ul>
+                                <li>Guest Status</li>
+                                <li><i class="fa fa-circle fa-fw txt-color-magenta"></i><a href-void class="btn btn-normal">VVIP</a></li>
+                                <li><i class="fa fa-circle fa-fw txt-color-red"></i><a href-void class="btn btn-normal">VIP</a></li>
+                                <li><i class="fa fa-circle fa-fw"></i><a href-void class="btn btn-primary bg-color-magenta txt-color-white">Guest</a></li>
+                            </ul>
+                        </div>
+                        <div class="map-staff-status">
+                            <ul>
+                                <li>Staff Status</li>
+                                <li><i class="fa fa-bookmark fa-fw"></i><a href-void class="btn btn-normal">Escort</a></li>
+                                <li><i class="fa fa-shopping-basket fa-fw"></i><a href-void class="btn btn-normal">Maid</a></li>
+                                <li><i class="fa fa-heart-o fa-fw"></i><a href-void class="btn btn-normal">Therapist</a></li>
+                            </ul>
+                        </div>
+                        <div class="map-machine-status">
+                            <ul>
+                                <li>Machine Status</li>
+                                <li><i class="fa fa-cog fa-fw"></i><a href-void class="btn btn-normal">Treatment Machines</a></li>
+                                <li><i class="fa fa-cog fa-fw txt-color-red"></i><a href-void class="btn btn-normal">Theraphy Machines</a></li>
+                                <li><i class="fa fa-cog fa-fw txt-color-green"></i><a href-void class="btn btn-normal">Cleaning Machines</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col-sm-12 col-md-12 col-lg-10 map">
+                <header>
+                    <h2><i class="fa fa-map-marker"></i> Map</h2>
+                </header>
+                <img src="styles/img/map-example.png">
+                <a href-void class="btn btn-normal"><i class="fa fa-search-plus fa-fw"></i></a>
+                <a href-void class="btn btn-normal"><i class="fa fa-search-minus fa-fw"></i></a>
+            </article>
+        </div>
+    </section>
+</div>

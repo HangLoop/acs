@@ -1,0 +1,100 @@
+/*
+ * It is advised not to edit the smartadmin_production.css
+ * as this will override any changes you make in the 
+ * later versions of this theme. 
+ * 
+ * We advise that you use use this CSS to override 
+ * SmartAdmin styles. 
+ * 
+ * Rename the stylesheet to whatever your liking so it will stay
+ * unique to you with each update of SmartAdmin.
+ */
+
+/*
+ * INDEX
+ * 
+ * - HTML
+ * - BODY
+ * - CUSTOM STYLES
+ */
+
+* {
+	box-sizing: border-box;
+}
+
+ #hide-menu {
+ 	width: 30px !important;
+ }
+
+ #hide-menu a {
+ 	margin: 0px;
+ 	height: 100%;
+ 	line-height: 49px;
+ 	padding: 0;
+ }
+
+.map-dashboard .left-side-bar {
+	border-right: 1px solid #C8C8C8;
+}
+
+.map-dashboard header {
+	color: #812990;
+}
+
+.map-dashboard .form-group {
+	margin: 0;
+}
+
+.map-dashboard .action .btn-action {
+	width: 230px;
+	background: #812990;
+}
+
+.map-dashboard article > div {
+	width: 100%;
+}
+
+.map-dashboard .map-filter-container > div {
+	float: left;
+	width: 15%;
+	margin-left: 20px;
+}
+
+.map-dashboard .map-filter-container div ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.map-dashboard .map-filter-container div ul li:first-child {
+	font-weight: bold;
+	color: #812990;
+	font-size: 20px;
+}
+
+.map-dashboard .map-filter-container .btn-selected {
+	background: #812990;
+	color: #FFF;
+}
+
+.map-dashboard .map-filter-container .btn-normal {
+	background: #FFF;
+	color: #333;
+	border: 1px solid #ccc;
+}
+
+
+#date-picker {
+	color: #812990;
+	font-size: 28px;
+	padding: 0;
+}
+
+.map-dashboard .map-filter-container div ul li {
+	padding-top: 10px;
+	font-size: 24px;
+}
+
+.map-dashboard .map-filter-container div ul li a{
+	margin-left: 5px;
+	width: 150px;
+}
