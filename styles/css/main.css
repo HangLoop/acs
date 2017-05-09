@@ -10,6 +10,7 @@
  * unique to you with each update of SmartAdmin.
  */
 
+
 /*
  * INDEX
  * 
@@ -19,125 +20,298 @@
  */
 
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 #header-date {
-	float: left;
-	margin-left: 15px;
-	color: #812990;
+    float: left;
+    margin-left: 15px;
+    color: #812990;
 }
 
 #header-time {
-	margin-left: 15px;
-	color: #812990;
+    margin-left: 15px;
+    color: #812990;
 }
 
- #hide-menu {
- 	width: 30px !important;
- }
+#hide-menu {
+    width: 30px !important;
+}
 
- #hide-menu a {
- 	margin: 0px;
- 	height: 100%;
- 	line-height: 49px;
- 	padding: 0;
- }
+#hide-menu a {
+    margin: 0px;
+    height: 100%;
+    line-height: 49px;
+    padding: 0;
+}
 
 .map-dashboard .left-side-bar {
-	border-right: 1px solid #C8C8C8;
+    border-right: 1px solid #C8C8C8;
 }
 
 .map-dashboard .ui-datepicker {
-	width: 100%;
+    width: 100%;
 }
 
 .map-dashboard .ui-widget-content {
-	border: 0;
+    border: 0;
 }
 
 .map-dashboard .ui-datepicker .ui-datepicker-header {
-	color: #333;
-	line-height: 100%;
-	font-size: 18px;
-	background: #FFF;
+    color: #333;
+    line-height: 100%;
+    font-size: 18px;
+    background: #FFF;
 }
 
 .map-dashboard .ui-widget-header a {
-	color: #812990;
-	line-height: 100%;
-	font-size: 18px;
+    color: #812990;
+    line-height: 100%;
+    font-size: 18px;
 }
 
 .map-dashboard header {
-	color: #812990;
+    color: #812990;
 }
 
 .map-dashboard .form-group {
-	margin: 0;
+    margin: 0;
 }
 
 .map-dashboard .action .btn-action {
-	width: 100%;
-	background: #812990;
+    width: 100%;
+    background: #812990;
 }
 
 .map-dashboard article > div {
-	width: 100%;
+    width: 100%;
 }
 
 .map-dashboard .map-filter-container > div {
-	float: left;
-	width: 15%;
-	margin-left: 20px;
+    float: left;
+    width: 15%;
+    margin-left: 20px;
 }
 
 .map-dashboard .map-filter-container div ul {
-	list-style-type: none;
-	padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 .map-dashboard .map-filter-container div ul li:first-child {
-	font-weight: bold;
-	color: #812990;
-	font-size: 20px;
+    font-weight: bold;
+    color: #812990;
+    font-size: 20px;
 }
 
 .map-dashboard .map-filter-container .map-machine-status {
-	width: 20%;
+    width: 20%;
 }
 
 .map-dashboard .map-filter-container .btn-normal {
-	background: #FFF;
-	color: #333;
-	border: 1px solid #ccc;
+    background: #FFF;
+    color: #333;
+    border: 1px solid #ccc;
 }
 
 .map-dashboard .map-filter-container ul li .btn-selected {
-	background: #812990;
-	color: #FFF;
+    background: #812990;
+    color: #FFF;
 }
 
 #date-picker {
-	color: #812990;
-	font-size: 28px;
-	padding: 0;
+    color: #812990;
+    font-size: 28px;
+    padding: 0;
 }
 
 .map-dashboard .map-filter-container div ul li {
-	padding-top: 10px;
-	font-size: 24px;
+    padding-top: 10px;
+    font-size: 24px;
 }
 
-.map-dashboard .map-filter-container div ul li a{
-	margin-left: 5px;
-	min-width: 75%;
+.map-dashboard .map-filter-container div ul li a {
+    margin-left: 5px;
+    min-width: 75%;
 }
 
 .map-dashboard .map #beacon-map {
-	text-align: center;
+    text-align: center;
 }
 
 .map-dashboard .map #beacon-map a {
-	float: right;
+    float: right;
+}
+
+.map-dashboard .modal .btn-normal {
+    font-size: 18px;
+    height: 32px;
+    width: 98px;
+    background: #812990;
+    color: #FFF;
+    text-align: center;
+}
+
+.map-dashboard .modal #check-in .btn-normal {
+    margin-top: 25px;
+    float: right;
+    width: 50%;
+}
+
+.map-dashboard .modal .handband-and-locker-info .btn-normal {
+    margin-top: 25px;
+}
+
+.map-dashboard .modal-title {
+    color: #812990;
+    font-weight: bold;
+}
+
+.map-dashboard .modal-content {
+    border-radius: 10px;
+}
+
+.map-dashboard .smart-accordion-default.panel-group {
+    border-top: 2px solid #812990;
+}
+
+.map-dashboard .smart-accordion-default .panel-default {
+    border-color: #E9E9E9;
+}
+
+.map-dashboard .modal-header {
+    border: 0;
+}
+
+.map-dashboard .modal-body {
+    padding: 0 20px 10px 20px;
+}
+
+.map-dashboard .smart-form .label {
+    color: #812990;
+    font-size: 18px
+}
+
+.map-dashboard .modal-body .panel .panel-heading {
+    background: #FFF;
+    color: #812990;
+}
+
+.map-dashboard .modal-body .panel .panel-title {
+    font-size: 24px;
+}
+
+.map-dashboard .modal-body .panel .panel-title span {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    background: #812990;
+    border-radius: 100%;
+    font-size: 32px;
+    margin-right: 20px;
+}
+
+.map-dashboard .modal-body .panel .collapsed {
+    background: #F6F6F6;
+    font-size: 18px;
+}
+
+.map-dashboard .modal-body .panel .panel-title .collapsed span {
+    display: inline;
+    background: transparent;
+    border-radius: 0;
+    font-size: 18px;
+    color: #812990;
+    width: auto;
+    height: auto;
+    line-height: 0;
+}
+
+.map-dashboard .panel-group .panel-heading+.panel-collapse>.list-group,
+.panel-group .panel-heading+.panel-collapse>.panel-body {
+    border: 0;
+}
+
+.map-dashboard #check-in {
+    margin-left: 50px;
+}
+
+.map-dashboard .modal {
+    color: #812990;
+}
+
+.map-dashboard .customer-record {
+    display: table-row;
+    background: #F3EAF4;
+    font-size: 16px;
+}
+
+.map-dashboard .searching-result h4 {
+    margin: 10px 0;
+}
+
+.map-dashboard .table-cell {
+    display: table-cell;
+    padding: 10px;
+    vertical-align: top;
+}
+
+.map-dashboard .table-cell:first-child, .map-dashboard .table-cell:last-child {
+    vertical-align: middle;
+    text-align: center;
+    width: 10%;
+    padding: 0 30px;
+}
+
+.map-dashboard .customer-profile {
+    width: 20%;
+    vertical-align: top;
+}
+
+.map-dashboard .booking-info {
+    width: 60%;
+}
+
+.map-dashboard #customer-pic {
+    margin: 0;
+    border-radius: 10px;
+    width: 60px;
+}
+
+.map-dashboard .smart-form .input input,
+.smart-form .select select,
+.smart-form .textarea textarea {
+    border-radius: 5px;
+    background: #F6F6F6;
+}
+
+.map-dashboard .customer-record .customer-name,
+.map-dashboard .customer-record .member-tier {
+    font-size: 24px;
+}
+
+.map-dashboard .customer-record .member-tier {
+    color: #F01307;
+}
+
+.map-dashboard #next a, .map-dashboard #confirmed {
+    font-size: 50px;
+    color: #812990;
+    background: transparent;
+}
+
+.map-dashboard #confirmed {
+    color: #40C353;
+}
+
+.map-dashboard .locker-no {
+    font-size: 24px;
+    text-align: center;
+}
+
+.map-dashboard #matched-locker {
+    font-size: 60px;
 }

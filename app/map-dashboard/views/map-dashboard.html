@@ -7,10 +7,10 @@
                 <header>
                     <h2><i class="fa fa-flag"></i> Action</h2>
                 </header>
-                <a href-void class="btn btn-action txt-color-white"><i class="fa fa-chain-broken"></i> Register Guest</a>
+                <a class="btn btn-action txt-color-white" data-toggle="modal" data-target="#register-guest"><i class="fa fa-chain-broken"></i> Register Guest</a>
                 <br>
                 <br>
-                <a href-void class="btn btn-action txt-color-white"><i class="fa fa-search"></i> Booking Enquiries</a>
+                <a class="btn btn-action txt-color-white" data-toggle="modal" data-target="#booking-enquires"><i class="fa fa-search"></i> Booking Enquiries</a>
             </div>
             <div class="date">
                 <header>
@@ -60,6 +60,7 @@
                 </div>
             </div>
         </div>
+        <!-- Map filters -->
         <article class="col-sm-12 col-md-10 col-lg-10">
             <div class="map-filter" ng-controller="mapDashboardCtrl">
                 <header>
@@ -123,6 +124,8 @@
                 </div>
             </div>
         </article>
+        <!--End map filters-->
+        <!-- Beeacon map -->
         <article class="col-sm-12 col-md-12 col-lg-10 map">
             <header>
                 <h2><i class="fa fa-map-marker"></i> Map</h2>
@@ -133,5 +136,168 @@
                 <a href-void class="btn btn-normal"><i class="fa fa-search-minus fa-fw"></i></a>
             </div>
         </article>
+        <!--end beacon map-->
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="register-guest" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Register Guest</h4>
+                </div>
+                <div class="modal-body">
+                    <!--Collapsible group-->
+                    <div class="panel-group smart-accordion-default" id="register-guest-accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#register-guest-accordion" href="#check-in"><span>1</span> Check-in</a></h4>
+                            </div>
+                            <div id="check-in" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <form class="smart-form">
+                                        <div class="row">
+                                            <section class="col col-4">
+                                                <label class="label">Customer Name</label>
+                                                <label class="input"> <i class="icon-append fa fa-search"></i>
+                                                    <input type="text" name="name">
+                                                </label>
+                                            </section>
+                                            <section class="col col-4">
+                                                <label class="label">Member ID</label>
+                                                <label class="input"> <i class="icon-append fa fa-search"></i>
+                                                    <input type="text" name="member-id">
+                                                </label>
+                                            </section>
+                                        </div>
+                                        <div class="row">
+                                            <section class="col col-4">
+                                                <label class="label">Mobile No.</label>
+                                                <label class="input"> <i class="icon-append fa fa-search"></i>
+                                                    <input type="tel" name="mobile">
+                                                </label>
+                                            </section>
+                                            <section class="col col-4">
+                                                <button type="submit" name="search" class="btn btn-normal">
+                                                    Search
+                                                </button>
+                                            </section>
+                                        </div>
+                                    </form>
+                                    <div class="searching-result">
+                                        <h4>Today's Booking Records</h4>
+                                        <div class="customer-record">
+                                        <div class="table-cell">
+                                            <img id="customer-pic" src="styles/img/avatars/5.png" alt="avatar">
+                                        </div>
+                                        <div class="table-cell customer-profile">
+                                            
+                                                <div class="customer-name">Ms Lau</div>
+                                                <div class="member-id">0036688</div>
+                                                <div class="member-tier"><i class="fa fa-trophy"></i></div>
+                                            
+                                        </div>
+                                        <div class="table-cell booking-info">
+                                            
+                                                <div class="booking-time">1:00pm - 2:30pm (1.5 hr)</div>
+                                                <div class="booking-treatment">Treatment A</div>
+                                                <div class="booking-therapist">Therapist: <span class="booking-therapist-name">THER-LILY LEE</span></div>
+                                                <div class="booking-room">Room 18</div>
+                                            
+                                        </div>
+                                        <div class="table-cell">
+                                            <div id="next">
+                                                <a href="#pairing" data-toggle="collapse" data-parent="#register-guest-accordion"><i class="fa fa-arrow-circle-o-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#register-guest-accordion" href="#pairing" class="collapsed"><span>2</span> Pair Handband & Locker</a></h4>
+                            </div>
+                            <div id="pairing" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="customer-record">
+                                        <div class="table-cell">
+                                            <img id="customer-pic" src="styles/img/avatars/5.png" alt="avatar">
+                                        </div>
+                                        <div class="table-cell customer-profile">
+
+                                                <div class="customer-name">Ms Lau</div>
+                                                <div class="member-id">0036688</div>
+                                                <div class="member-tier"><i class="fa fa-trophy"></i></div>
+
+                                        </div>
+                                        <div class="table-cell booking-info">
+
+                                                <div class="booking-time">1:00pm - 2:30pm (1.5 hr)</div>
+                                                <div class="booking-treatment">Treatment A</div>
+                                                <div class="booking-therapist">Therapist: <span class="booking-therapist-name">THER-LILY LEE</span></div>
+                                                <div class="booking-room">Room 18</div>
+ 
+                                        </div>
+                                        <div class="table-cell">
+                                            <div id="confirmed">
+                                                    <i class="fa fa-check-circle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="handband-and-locker-info">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <form class="smart-form">
+                                                    <label class="label">HandBand ID</label>
+                                                    <label class="input">
+                                                        </i>
+                                                        <input type="text" name="handband-id">
+                                                    </label>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <button type="submit" name="scan" class="btn btn-normal">
+                                                    Scan
+                                                </button>
+                                            </div>
+                                            <div class="col-md-6 locker-no">
+                                                <h4>Locker No.</h4>
+                                                <div id="matched-locker">28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End collapsible group-->
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="booking-enquires" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Booking Enquiries</h4>
+                </div>
+                <div class="modal-body">
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
 </div>
