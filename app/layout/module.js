@@ -3,7 +3,7 @@
 
 angular.module('app.layout', ['ui.router'])
 
-.config(function ($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider) {
 
 
     $stateProvider
@@ -19,7 +19,11 @@ angular.module('app.layout', ['ui.router'])
 
 })
 
-.controller('datCtrl', function($scope) {
+.controller('datCtrl', function($scope, $interval) {
     $scope.today = new Date();
+    var tick = function() {
+        $scope.clock = Date.now();
+    }
+    tick();
+    $interval(tick, 1000);
 });
-

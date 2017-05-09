@@ -27,7 +27,7 @@ To build minified version:
 resources
 ---------
 
-- [complete project demo](http://sang-shockwave.rhcloud.com)
+- [complete project demo](http://192.241.236.31/themes/preview/smartadmin/1.8.x/angularjs/#/dashboard)
 
 
 ******************************************************************
