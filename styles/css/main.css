@@ -146,10 +146,11 @@
 .map-dashboard .modal .btn-normal {
     font-size: 18px;
     height: 32px;
-    width: 98px;
+    min-width: 98px;
     background: #812990;
     color: #FFF;
     text-align: center;
+    line-height: 100%;
 }
 
 .map-dashboard .modal #check-in .btn-normal {
@@ -158,8 +159,8 @@
     width: 50%;
 }
 
-.map-dashboard .modal .handband-and-locker-info .btn-normal {
-    margin-top: 25px;
+.map-dashboard .modal .handband-and-locker-info #scan {
+    margin-top: 30px;
 }
 
 .map-dashboard .modal-title {
@@ -187,7 +188,7 @@
     padding: 0 20px 10px 20px;
 }
 
-.map-dashboard .smart-form .label {
+.map-dashboard .smart-form .label,  label{
     color: #812990;
     font-size: 18px
 }
@@ -197,7 +198,7 @@
     color: #812990;
 }
 
-.map-dashboard .modal-body .panel .panel-title {
+.map-dashboard .modal-body h4 {
     font-size: 24px;
 }
 
@@ -243,10 +244,19 @@
     color: #812990;
 }
 
-.map-dashboard .customer-record {
+.map-dashboard .customer-record, .map-dashboard .booking-number {
     display: table-row;
     background: #F3EAF4;
     font-size: 16px;
+    text-transform: capitalize;
+}
+
+.map-dashboard .selected-record-placeholder {
+    background: #F3EAF4;
+    width: 826px;
+    line-height: 132px;
+    text-align: center;
+    font-size: 20px
 }
 
 .map-dashboard .searching-result h4 {
@@ -266,6 +276,10 @@
     padding: 0 30px;
 }
 
+.map-dashboard .table-cell:nth-child(2) {
+    vertical-align: middle;
+}
+
 .map-dashboard .customer-profile {
     width: 20%;
     vertical-align: top;
@@ -273,6 +287,7 @@
 
 .map-dashboard .booking-info {
     width: 60%;
+    font-size: 20px;
 }
 
 .map-dashboard #customer-pic {
@@ -283,18 +298,23 @@
 
 .map-dashboard .smart-form .input input,
 .smart-form .select select,
-.smart-form .textarea textarea {
-    border-radius: 5px;
+.smart-form .textarea textarea, .map-dashboard .handband-and-locker-info .form-control {
+    border-radius: 5px!important;
     background: #F6F6F6;
 }
 
 .map-dashboard .customer-record .customer-name,
-.map-dashboard .customer-record .member-tier {
+.map-dashboard .customer-record .member-tier,
+.map-dashboard .booking-number {
     font-size: 24px;
 }
 
 .map-dashboard .customer-record .member-tier {
     color: #F01307;
+}
+
+.map-dashboard .booking-therapist-name {
+    text-transform: uppercase;
 }
 
 .map-dashboard #next a, .map-dashboard #confirmed {
@@ -313,5 +333,14 @@
 }
 
 .map-dashboard #matched-locker {
+    min-height: 85px;
     font-size: 60px;
+}
+
+.map-dashboard #today-bookings {
+    margin: 10px 0;
+}
+
+.map-dashboard .smart-form .select i {
+    box-shadow: 0 0 0 9px #F6F6F6;
 }

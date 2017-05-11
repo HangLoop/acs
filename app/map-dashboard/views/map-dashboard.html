@@ -1,5 +1,5 @@
 <!-- MAIN CONTENT -->
-<div class="map-dashboard" id="content">
+<div class="map-dashboard" id="content" ng-controller="mapDashboardCtrl">
     <!-- row -->
     <div class="row">
         <div class="col-sm-12 col-md-2 col-lg-2 left-side-bar">
@@ -8,6 +8,9 @@
                     <h2><i class="fa fa-flag"></i> Action</h2>
                 </header>
                 <a class="btn btn-action txt-color-white" data-toggle="modal" data-target="#register-guest"><i class="fa fa-chain-broken"></i> Register Guest</a>
+                <br>
+                <br>
+                <a class="btn btn-action txt-color-white" data-toggle="modal" data-target="#check-out"><i class="fa fa-sign-out"></i> Check-out Guest</a>
                 <br>
                 <br>
                 <a class="btn btn-action txt-color-white" data-toggle="modal" data-target="#booking-enquires"><i class="fa fa-search"></i> Booking Enquiries</a>
@@ -62,7 +65,7 @@
         </div>
         <!-- Map filters -->
         <article class="col-sm-12 col-md-10 col-lg-10">
-            <div class="map-filter" ng-controller="mapDashboardCtrl">
+            <div class="map-filter">
                 <header>
                     <h2><i class="fa fa-map-marker"></i> Display MAP by</h2>
                 </header>
@@ -71,7 +74,7 @@
                         <ul>
                             <li>Date</li>
                             <li id="date-picker">{{pickeddate | date : "d MMMM y" }}</li>
-                            <li>
+                            <!--<li>
                                 <div class="form-group">
                                     <div class="input-group">
                                         <input class="form-control" data-smart-clockpicker type="text" placeholder="From" data-autoclose="true">
@@ -86,7 +89,7 @@
                                         <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
                                     </div>
                                 </div>
-                            </li>
+                            </li>-->
                         </ul>
                     </div>
                     <div class="map-room-status">
@@ -188,31 +191,7 @@
                                     </form>
                                     <div class="searching-result">
                                         <h4>Today's Booking Records</h4>
-                                        <div class="customer-record">
-                                        <div class="table-cell">
-                                            <img id="customer-pic" src="styles/img/avatars/5.png" alt="avatar">
-                                        </div>
-                                        <div class="table-cell customer-profile">
-                                            
-                                                <div class="customer-name">Ms Lau</div>
-                                                <div class="member-id">0036688</div>
-                                                <div class="member-tier"><i class="fa fa-trophy"></i></div>
-                                            
-                                        </div>
-                                        <div class="table-cell booking-info">
-                                            
-                                                <div class="booking-time">1:00pm - 2:30pm (1.5 hr)</div>
-                                                <div class="booking-treatment">Treatment A</div>
-                                                <div class="booking-therapist">Therapist: <span class="booking-therapist-name">THER-LILY LEE</span></div>
-                                                <div class="booking-room">Room 18</div>
-                                            
-                                        </div>
-                                        <div class="table-cell">
-                                            <div id="next">
-                                                <a href="#pairing" data-toggle="collapse" data-parent="#register-guest-accordion"><i class="fa fa-arrow-circle-o-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        <booking-records></booking-records>
                                     </div>
                                 </div>
                             </div>
@@ -223,50 +202,22 @@
                             </div>
                             <div id="pairing" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    <div class="customer-record">
-                                        <div class="table-cell">
-                                            <img id="customer-pic" src="styles/img/avatars/5.png" alt="avatar">
-                                        </div>
-                                        <div class="table-cell customer-profile">
-
-                                                <div class="customer-name">Ms Lau</div>
-                                                <div class="member-id">0036688</div>
-                                                <div class="member-tier"><i class="fa fa-trophy"></i></div>
-
-                                        </div>
-                                        <div class="table-cell booking-info">
-
-                                                <div class="booking-time">1:00pm - 2:30pm (1.5 hr)</div>
-                                                <div class="booking-treatment">Treatment A</div>
-                                                <div class="booking-therapist">Therapist: <span class="booking-therapist-name">THER-LILY LEE</span></div>
-                                                <div class="booking-room">Room 18</div>
- 
-                                        </div>
-                                        <div class="table-cell">
-                                            <div id="confirmed">
-                                                    <i class="fa fa-check-circle"></i>
-                                            </div>
-                                        </div>
+                                    <div class="selected-record-placeholder" ng-if="!enableSelectedRecords">
+                                        <p>Please search and select a booking record from Check-in</p>
                                     </div>
+                                    <selected-records ng-if="enableSelectedRecords"></selected-records>
                                     <div class="handband-and-locker-info">
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <form class="smart-form">
-                                                    <label class="label">HandBand ID</label>
-                                                    <label class="input">
-                                                        </i>
-                                                        <input type="text" name="handband-id">
-                                                    </label>
-                                                </form>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <button type="submit" name="scan" class="btn btn-normal">
-                                                    Scan
-                                                </button>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="select-hb">HandBand ID</label>
+                                                    <select class="form-control" id="select-hb" ng-model="selectedItem" ng-options="item.handBandId for item in handBandLocker">
+                                                    </select>
+                                                </div>
                                             </div>
                                             <div class="col-md-6 locker-no">
                                                 <h4>Locker No.</h4>
-                                                <div id="matched-locker">28</div>
+                                                <div id="matched-locker">{{selectedItem.lockerId}}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -275,6 +226,76 @@
                         </div>
                     </div>
                     <!--End collapsible group-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-normal" ng-disabled="selectedItem.handBandId === 'Please select'">
+                        Done
+                    </button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="check-out" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Check-out Guest</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="handband-and-locker-info">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="select-hb-co">HandBand ID</label>
+                                    <select class="form-control" id="select-hb-co" ng-model="selectedItemCO" ng-options="itemCO.handBandId for itemCO in handBandLocker">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 locker-no">
+                                <h4>Locker No.</h4>
+                                <div id="matched-locker">{{selectedItemCO.lockerId}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-if="!(selectedItemCO.handBandId === 'Please Select')">
+                    <div class="booking-number" >
+                            <div class="table-cell">BK1234</div>
+                            <div class="table-cell"></div>
+                            <div class="table-cell"></div>
+                            <div class="table-cell"></div>
+                        </div>
+                    <div class="customer-record">
+                        <div class="table-cell">
+                            <img id="customer-pic" src="styles/img/avatars/5.png" alt="avatar">
+                        </div>
+                        <div class="table-cell customer-profile">
+                            <div class="customer-name">Ms Lau</div>
+                            <div class="member-id"><i class="fa fa-id-card-o"></i> 0036688</div>
+                            <div class="mobile"><i class="fa fa-mobile-phone"></i> 12345678</div>
+                            <div class="member-tier"><i class="fa fa-trophy"></i></div>
+                        </div>
+                        <div class="table-cell booking-info">
+                            <div class="booking-time">1:00pm - 2:30pm (1.5 hr)</div>
+                            <div class="booking-treatment">Treatment A</div>
+                            <div class="booking-therapist">Therapist: <span class="booking-therapist-name">THER-LILY LEE</span></div>
+                            <div class="booking-room">Room 18</div>
+                        </div>
+                        <div class="table-cell">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-normal" ng-disabled="selectedItemCO.handBandId === 'Please Select'">
+                        Done
+                    </button>
                 </div>
             </div>
             <!-- /.modal-content -->

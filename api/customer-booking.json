@@ -1,0 +1,70 @@
+[
+    {
+        "booking": "BK00001",
+        "customer": {
+            "pic": "styles/img/avatars/5.png",
+            "name": "Ms Lau",
+            "mobile": "12345678",
+            "id": "0036688",
+            "tier": "VVIP"
+        },
+        "treatment": [
+            {
+                "start_time": "1:00pm",
+                "end_time": "2:30pm",
+                "duration": "1.5 hr",
+                "treatment": "treatment a",
+                "therapist": "ther-lily lee",
+                "room": "room 18"
+            },
+            {
+                "start_time": "1:00pm",
+                "end_time": "2:30pm",
+                "duration": "1.5 hr",
+                "treatment": "treatment a",
+                "therapist": "ther-lily lee",
+                "room": "room 18"
+            }
+        ]
+    },
+    {
+        "booking": "BK00002",
+        "customer": {
+            "pic": "styles/img/avatars/5.png",
+            "name": "Ms Lau",
+            "mobile": "12345678",
+            "id": "0036688",
+            "tier": "VIP"
+        },
+        "treatment": [
+            {
+                "start_time": "6:00pm",
+                "end_time": "8:30pm",
+                "duration": "2.5 hr",
+                "treatment": "treatment c",
+                "therapist": "chan",
+                "room": "room 18"
+            }
+        ]
+    },
+    {
+        "booking": "BK00003",
+        "customer": {
+            "pic": "styles/img/avatars/1.png",
+            "name": "Ms Lau",
+            "mobile": "23456789",
+            "id": "0044444",
+            "tier": "Guest"
+        },
+        "treatment": [
+            {
+                "start_time": "6:00pm",
+                "end_time": "8:30pm",
+                "duration": "2.5 hr",
+                "treatment": "treatment c",
+                "therapist": "fung",
+                "room": "room 19"
+            }
+        ]
+    }
+]
