@@ -198,7 +198,7 @@
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#register-guest-accordion" href="#pairing" class="collapsed"><span>2</span> Pair Handband & Locker</a></h4>
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#register-guest-accordion" class="collapsed"><span>2</span> Pair Handband & Locker</a></h4>
                             </div>
                             <div id="pairing" class="panel-collapse collapse">
                                 <div class="panel-body">
@@ -228,7 +228,7 @@
                     <!--End collapsible group-->
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-normal" ng-disabled="selectedItem.handBandId === 'Please select'">
+                    <button type="button" class="btn btn-normal" ng-disabled="selectedItem.handBandId === 'Please Select'">
                         Done
                     </button>
                 </div>
@@ -249,47 +249,52 @@
                     <h4 class="modal-title" id="myModalLabel">Check-out Guest</h4>
                 </div>
                 <div class="modal-body">
-                    <div class="handband-and-locker-info">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="select-hb-co">HandBand ID</label>
-                                    <select class="form-control" id="select-hb-co" ng-model="selectedItemCO" ng-options="itemCO.handBandId for itemCO in handBandLocker">
-                                    </select>
+                    <div class="handband-and-locker-info action-outer">
+                        <div class="action-inner">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="select-hb-co">HandBand ID</label>
+                                        <select class="form-control" id="select-hb-co" ng-model="selectedItemCO" ng-options="itemCO.handBandId for itemCO in handBandLocker">
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 locker-no">
-                                <h4>Locker No.</h4>
-                                <div id="matched-locker">{{selectedItemCO.lockerId}}</div>
+                                <div class="col-md-6 locker-no">
+                                    <h4>Locker No.</h4>
+                                    <div id="matched-locker">{{selectedItemCO.lockerId}}</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div ng-if="!(selectedItemCO.handBandId === 'Please Select')">
-                    <div class="booking-number" >
+                        <div class="booking-number">
                             <div class="table-cell">BK1234</div>
                             <div class="table-cell"></div>
                             <div class="table-cell"></div>
                             <div class="table-cell"></div>
                         </div>
-                    <div class="customer-record">
-                        <div class="table-cell">
-                            <img id="customer-pic" src="styles/img/avatars/5.png" alt="avatar">
+                        <div class="customer-record">
+                            <div class="table-cell">
+                                <img id="customer-pic" src="styles/img/avatars/5.png" alt="avatar">
+                            </div>
+                            <div class="table-cell customer-profile">
+                                <div class="customer-name">Ms Lau</div>
+                                <div class="member-id"><i class="fa fa-id-card-o"></i> 0036688</div>
+                                <div class="mobile"><i class="fa fa-mobile-phone"></i> 12345678</div>
+                                <div class="member-tier"><i class="fa fa-trophy"></i></div>
+                            </div>
+                            <div class="table-cell booking-info">
+                                <div class="booking-time">1:00pm - 2:30pm (1.5 hr)</div>
+                                <div class="booking-treatment">Treatment A</div>
+                                <div class="booking-therapist">Therapist: <span class="booking-therapist-name">THER-LILY LEE</span></div>
+                                <div class="booking-room">Room 18</div>
+                            </div>
+                            <div class="table-cell">
+                                <div id="confirmed">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                            </div>
                         </div>
-                        <div class="table-cell customer-profile">
-                            <div class="customer-name">Ms Lau</div>
-                            <div class="member-id"><i class="fa fa-id-card-o"></i> 0036688</div>
-                            <div class="mobile"><i class="fa fa-mobile-phone"></i> 12345678</div>
-                            <div class="member-tier"><i class="fa fa-trophy"></i></div>
-                        </div>
-                        <div class="table-cell booking-info">
-                            <div class="booking-time">1:00pm - 2:30pm (1.5 hr)</div>
-                            <div class="booking-treatment">Treatment A</div>
-                            <div class="booking-therapist">Therapist: <span class="booking-therapist-name">THER-LILY LEE</span></div>
-                            <div class="booking-room">Room 18</div>
-                        </div>
-                        <div class="table-cell">
-                        </div>
-                    </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -314,11 +319,58 @@
                     <h4 class="modal-title" id="myModalLabel">Booking Enquiries</h4>
                 </div>
                 <div class="modal-body">
+                    <div class="action-outer">
+                        <div class="action-inner">
+                            <h4>Search by</h4>
+                            <form class="smart-form">
+                                <div class="row">
+                                    <section class="col col-5">
+                                        <label class="label">Guest Name</label>
+                                        <label class="input"> <i class="icon-append fa fa-search"></i>
+                                            <input type="text" name="name">
+                                        </label>
+                                    </section>
+                                    <section class="col col-5">
+                                        <label class="label">Member ID</label>
+                                        <label class="input"> <i class="icon-append fa fa-search"></i>
+                                            <input type="text" name="member-id">
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-4">
+                                        <label class="label">From</label>
+                                        <label class="input"> <i class="icon-append fa fa-calendar"></i>
+                                            <input type="text" name="startdate" id="startdate" data-smart-datepicker data-min-restrict="#finishdate" placeholder="Expected start date">
+                                        </label>
+                                    </section>
+                                    <section class="col col-4">
+                                        <label class="label">To</label>
+                                        <label class="input"> <i class="icon-append fa fa-calendar"></i>
+                                            <input type="text" name="finishdate" id="finishdate" data-smart-datepicker data-max-restrict="#startdate" placeholder="Expected finish date">
+                                        </label>
+                                    </section>
+                                    <section class="col col-2">
+                                        <label class="label">Room No.</label>
+                                        <label class="input"> <i class="icon-append fa fa-search"></i>
+                                            <input type="text" name="member-id">
+                                        </label>
+                                    </section>
+                                    <section class="col col-2">
+                                        <button type="submit" name="search" class="btn btn-normal">
+                                            Search
+                                        </button>
+                                    </section>
+                                </div>
+                        </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <!-- /.modal-content -->
         </div>
-        <!-- /.modal-dialog -->
+        <!-- /.modal-content -->
     </div>
-    <!-- /.modal -->
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 </div>

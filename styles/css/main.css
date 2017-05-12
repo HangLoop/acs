@@ -81,6 +81,10 @@
 .map-dashboard .action .btn-action {
     width: 100%;
     background: #812990;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    font-size: 16px;
 }
 
 .map-dashboard article > div {
@@ -154,9 +158,22 @@
 }
 
 .map-dashboard .modal #check-in .btn-normal {
-    margin-top: 25px;
     float: right;
     width: 50%;
+}
+
+.map-dashboard .modal #check-in .btn-normal,
+#booking-enquires .btn-normal {
+    margin-top: 25px;
+}
+
+.map-dashboard .modal .action-outer {
+    border-top: 2px solid #812990;
+}
+
+.map-dashboard .action-inner {
+    border: 1px solid #E9E9E9;
+    padding: 10px 15px;
 }
 
 .map-dashboard .modal .handband-and-locker-info #scan {
@@ -188,7 +205,8 @@
     padding: 0 20px 10px 20px;
 }
 
-.map-dashboard .smart-form .label,  label{
+.map-dashboard .smart-form .label,
+label {
     color: #812990;
     font-size: 18px
 }
@@ -244,7 +262,8 @@
     color: #812990;
 }
 
-.map-dashboard .customer-record, .map-dashboard .booking-number {
+.map-dashboard .customer-record,
+.map-dashboard .booking-number {
     display: table-row;
     background: #F3EAF4;
     font-size: 16px;
@@ -263,26 +282,29 @@
     margin: 10px 0;
 }
 
+.map-dashboard #today-bookings {
+    margin: 10px 0;
+}
+
 .map-dashboard .table-cell {
     display: table-cell;
     padding: 10px;
     vertical-align: top;
 }
 
-.map-dashboard .table-cell:first-child, .map-dashboard .table-cell:last-child {
-    vertical-align: middle;
+.map-dashboard .table-cell:first-child,
+.map-dashboard .table-cell:last-child {
     text-align: center;
+}
+
+.map-dashboard .table-cell:last-child {
+    vertical-align: middle;
     width: 10%;
     padding: 0 30px;
 }
 
-.map-dashboard .table-cell:nth-child(2) {
-    vertical-align: middle;
-}
-
 .map-dashboard .customer-profile {
     width: 20%;
-    vertical-align: top;
 }
 
 .map-dashboard .booking-info {
@@ -298,7 +320,8 @@
 
 .map-dashboard .smart-form .input input,
 .smart-form .select select,
-.smart-form .textarea textarea, .map-dashboard .handband-and-locker-info .form-control {
+.smart-form .textarea textarea,
+.map-dashboard .handband-and-locker-info .form-control {
     border-radius: 5px!important;
     background: #F6F6F6;
 }
@@ -317,7 +340,8 @@
     text-transform: uppercase;
 }
 
-.map-dashboard #next a, .map-dashboard #confirmed {
+.map-dashboard #next a,
+.map-dashboard #confirmed {
     font-size: 50px;
     color: #812990;
     background: transparent;
@@ -337,10 +361,10 @@
     font-size: 60px;
 }
 
-.map-dashboard #today-bookings {
-    margin: 10px 0;
-}
-
 .map-dashboard .smart-form .select i {
     box-shadow: 0 0 0 9px #F6F6F6;
+}
+
+#booking-enquires h4 {
+    margin-bottom: 10px;
 }
