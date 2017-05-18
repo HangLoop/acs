@@ -1,29 +1,21 @@
-<div id="today-bookings">
-    <div class="booking-number">
-        <div class="table-cell">
-            {{currentIdx.booking}}
-        </div>
-        <div class="table-cell"></div>
-        <div class="table-cell"></div>
-        <div class="table-cell"></div>
-    </div>
+<div id="today-bookings" ng-repeat="record in booking" ng-if="record.selected">
     <div class="customer-record">
         <div class="table-cell">
-            <img id="customer-pic" ng-src="{{currentIdx.customer.pic}}" alt="avatar">
+            <span class="booking-number">{{record.booking}}</span>
+            <img id="customer-pic" ng-src="{{record.customer.pic}}" alt="avatar">
         </div>
         <div class="table-cell customer-profile">
-            <div class="customer-name">{{currentIdx.customer.name}}</div>
-            <div class="member-id"><i class="fa fa-id-card-o"></i> {{currentIdx.customer.id}}</div>
-            <div class="mobile"><i class="fa fa-mobile-phone"></i> {{currentIdx.customer.mobile}}</div>
-            <div class="member-tier"><i ng-class="tierClass(currentIdx)"></i></div>
+            <div class="customer-name">{{record.customer.name}}</div>
+            <div class="member-id"><i class="fa fa-id-card-o"></i> {{record.customer.id}}</div>
+            <div class="mobile"><i class="fa fa-mobile-phone"></i> {{record.customer.mobile}}</div>
+            <div class="member-tier"><i ng-class="tierClass(record)"></i></div>
         </div>
         <div class="table-cell booking-info">
-            <div ng-repeat="x in currentIdx.treatment">
-                <div class="booking-time">{{x.start_time}} - {{x.end_time}} ({{x.duration}})</div>
-                <div class="booking-treatment">{{x.treatment}}</div>
-                <div class="booking-therapist">Therapist: <span class="booking-therapist-name">{{x.therapist}}</span></div>
-                <div class="booking-room">{{x.room}}</div>
-                <br>
+            <div ng-repeat="info in record.treatment">
+                <div class="booking-time">{{info.start_time}} - {{info.end_time}} ({{info.duration}})</div>
+                <div class="booking-treatment">{{info.treatment}}</div>
+                <div class="booking-therapist">Therapist: <span class="booking-therapist-name">{{info.therapist}}</span></div>
+                <div class="booking-room">{{info.room}}</div>
             </div>
         </div>
         <div class="table-cell">
@@ -33,3 +25,4 @@
         </div>
     </div>
 </div>
+

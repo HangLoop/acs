@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBookingRecord', function($scope, customerBookingRecord) {
+angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBookingRecord', '$sce', function($scope, customerBookingRecord, $sce) {
     //Change status button color in map filter
     $scope.selectStatus = function() {
         jQuery('.btn-normal').click(function() {
@@ -21,7 +21,7 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
         }
     });
 
-    //search record data
+    //record data
     customerBookingRecord.success(function(records) {
         $scope.booking = records;
     });
@@ -44,37 +44,39 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
     $scope.enableSelectedRecords = false;
     $scope.selectRecord = function(i) {
         $scope.enableSelectedRecords = true;
-        $scope.currentIdx = $scope.booking[i];
+        //$scope.currentIdx = $scope.booking[i];
     };
+
+    //Select all
+    $scope.toggleAll = function() {
+     var toggleStatus = $scope.isAllSelected;
+     angular.forEach($scope.booking, function(itm){ itm.selected = toggleStatus; });
+   
+    }
+      
+    $scope.optionToggled = function(){
+        $scope.isAllSelected = $scope.booking.every(function(itm){ return itm.selected; })
+    }
+        
+    //Mark as friend
+    $scope.markAsFriend = function() {
+        var input = jQuery('#name-on-map');
+        var text = input.val();
+
+        if (text!="(friend)") {
+            input.val(text + " (friend)");
+        };
+        
+    };
+
 
     //Hand Band ID and locker
     $scope.handBandLocker = [{
         "handBandId": "Please Select",
         "lockerId": ""
     }, {
-        "handBandId": "HB001",
+        "handBandId": "BBtest1",
         "lockerId": "01"
-    }, {
-        "handBandId": "HB002",
-        "lockerId": "02"
-    }, {
-        "handBandId": "HB003",
-        "lockerId": "03"
-    }, {
-        "handBandId": "HB004",
-        "lockerId": "04"
-    }, {
-        "handBandId": "HB005",
-        "lockerId": "05"
-    }, {
-        "handBandId": "HB006",
-        "lockerId": "06"
-    }, {
-        "handBandId": "HB007",
-        "lockerId": "07"
-    }, {
-        "handBandId": "HB008",
-        "lockerId": "08"
     }];
     $scope.selectedItem = $scope.handBandLocker[0];
     $scope.selectedItemCO = $scope.handBandLocker[0];
@@ -84,4 +86,11 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
         $scope.selectedHandBand = true;
     };
 
+    //Pop-up map filter
+    $scope.filterPopup = function() {
+        jQuery('.btn-filter').click(function() {
+            jQuery('.map-filter-container').toggle();
+        });
+    }
+    $scope.filterPopup();
 }]);
