@@ -27,7 +27,7 @@
 .part-one{height: 430px;margin-top: 20px;}
 .part-two{display: none;height: 430px;margin-top: 20px;}
 .part-title{cursor: pointer;}
-.map .left{width: 90px;height: 90px; line-height: 90px;background-color:  #812990;font-size: 26px; color: #fff;text-align: center;border-radius: 45px;}
+.left{width: 90px;height: 90px; line-height: 90px;background-color:  #812990;font-size: 26px; color: #fff;text-align: center;border-radius: 45px;}
 .right{margin-left: 3%;}
 .info-searchbox{height: 100px;}
 .info-searchbox span{display: block;height: 50px; line-height: 50px;font-size: 20px;color:#812990;font-weight: bold; }

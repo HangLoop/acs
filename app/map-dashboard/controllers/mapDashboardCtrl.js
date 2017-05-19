@@ -88,9 +88,22 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
 
     //Pop-up map filter
     $scope.filterPopup = function() {
-        jQuery('.btn-filter').click(function() {
+        jQuery('#btn-filter').click(function() {
             jQuery('.map-filter-container').toggle();
         });
     }
     $scope.filterPopup();
+
+    //alert box
+    $scope.eg5 = function() {
+
+        $.smallBox({
+            title: "Ding Dong!",
+            content: "<div class='alert-box'>Someone's at the door...shall one get it sir?</div",
+            color: "#296191",
+            //timeout: 8000,
+            icon: "fa fa-bell swing animated"
+        });
+    };
+
 }]);

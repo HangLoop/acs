@@ -4,9 +4,9 @@
     <div class="row">
         <div class="col-sm-2 col-md-2 left-side-bar">
             <div class="date">
-                <header>
+                <!--<header>
                     <h2><i class="fa fa-calendar"></i> Date</h2>
-                </header>
+                </header>-->
                 <div id="datepicker"></div>
                 <div class="form-group">
                     <div class="input-group">
@@ -112,48 +112,54 @@
         </div>
         <!-- Map filters -->
         <article class="col-sm-10 col-md-10 control">
-            <div class="action">
-                <!--<header>
-                    <h2><i class="fa fa-flag"></i> Action</h2>
-                </header>-->
-                <a class="btn btn-action txt-color-white" data-toggle="modal" data-target="#register-guest"><i class="fa fa-chain-broken"></i> Check-in</a>
-                <a class="btn btn-action txt-color-white" data-toggle="modal" data-target="#check-out"><i class="fa fa-sign-out"></i> Check-out</a>
-            </div>
-            <div class="map-filter pull-right">
-                <a href-void class="btn btn-filter btn-lg"> <i class="fa fa-map-marker"></i> Display MAP by</a>
-            </div>
-            <div class="map-filter-container">
-                <div class="map-guest-status">
-                    <ul>
-                        <li>Zone</li>
-                        <li><a href-void onclick='showIcon(this)' class="btn btn-normal">L1</a></li>
-                        <li><a href-void onclick='showIcon(this)' class="btn btn-normal">L2</a></li>
-                        <li><a href-void onclick='showIcon(this)' class="btn btn-normal">R2</a></li>
-                        <li><a href-void onclick='showIcon(this)' class="btn btn-normal">R2</a></li>
-                    </ul>
-                </div>
-                <div class="map-staff-status">
-                    <ul>
-                        <li>Staff</li>
-                        <li><i class="fa fa-bookmark fa-fw"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Escort</a></li>
-                        <li><i class="fa fa-shopping-basket fa-fw"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Maid</a></li>
-                        <li><i class="fa fa-heart-o fa-fw"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Therapist</a></li>
-                    </ul>
-                </div>
-                <div class="map-machine-status">
-                    <ul>
-                        <li>Equpiment</li>
-                        <li><i class="fa fa-cog fa-fw"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Treatment Machines</a></li>
-                        <li><i class="fa fa-cog fa-fw txt-color-red"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Theraphy Machines</a></li>
-                        <li><i class="fa fa-cog fa-fw txt-color-green"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Cleaning Machines</a></li>
-                    </ul>
-                </div>
-            </div>
         </article>
         <!--End map filters-->
         <!-- Beeacon map -->
         <article class="col-sm-12 col-md-12 col-lg-10 map">
-            <div style="width:100%;height:850px;" id="mapContainer"></div>
+            <div style="width:100%;height:850px;" id="mapContainer">
+                <div class="control">
+                    <div class="action">
+                        <!--<header>
+                    <h2><i class="fa fa-flag"></i> Action</h2>
+                </header>-->
+                        <a class="btn btn-action txt-color-white" data-toggle="modal" data-target="#register-guest"><i class="fa fa-chain-broken"></i> Check-in</a>
+                        <a class="btn btn-action txt-color-white" data-toggle="modal" data-target="#check-out"><i class="fa fa-sign-out"></i> Check-out</a>
+                        <button type="button" ng-click="eg5()" class="btn btn-default">
+                    Alert
+                </button>
+                    </div>
+                </div>
+                <div class="map-filter">
+                    <a id="btn-filter" href-void class="btn btn-lg"> <i class="fa fa-map-marker"></i> Display MAP by</a>
+                </div>
+                <div class="map-filter-container">
+                    <div class="map-guest-status">
+                        <ul>
+                            <li>Zone</li>
+                            <li><a href-void onclick='showIcon(this)' class="btn btn-normal">L1</a></li>
+                            <li><a href-void onclick='showIcon(this)' class="btn btn-normal">L2</a></li>
+                            <li><a href-void onclick='showIcon(this)' class="btn btn-normal">R2</a></li>
+                            <li><a href-void onclick='showIcon(this)' class="btn btn-normal">R2</a></li>
+                        </ul>
+                    </div>
+                    <div class="map-staff-status">
+                        <ul>
+                            <li>Staff</li>
+                            <li><i class="fa fa-bookmark fa-fw"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Escort</a></li>
+                            <li><i class="fa fa-shopping-basket fa-fw"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Maid</a></li>
+                            <li><i class="fa fa-heart-o fa-fw"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Therapist</a></li>
+                        </ul>
+                    </div>
+                    <div class="map-machine-status">
+                        <ul>
+                            <li>Equpiment</li>
+                            <li><i class="fa fa-cog fa-fw"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Treatment Machines</a></li>
+                            <li><i class="fa fa-cog fa-fw txt-color-red"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Theraphy Machines</a></li>
+                            <li><i class="fa fa-cog fa-fw txt-color-green"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Cleaning Machines</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </article>
         <!--end beacon map-->
     </div>

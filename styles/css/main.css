@@ -84,7 +84,6 @@
 }
 
 .all-data .table>tbody>tr>td:nth-child(1) {
-    
     width: 20%;
 }
 
@@ -94,7 +93,7 @@
 
 .map-dashboard .ui-datepicker {
     width: 100%;
-    margin-bottom: 0px;
+    margin: 15px 0 0 0;
 }
 
 .map-dashboard .ui-widget-content {
@@ -122,53 +121,61 @@
     margin: 0;
 }
 
-.map-dashboard .action {
-    width: 20%;
-    margin-top: 15px;
-}
-
 .map-dashboard header h2 {
     text-align: left;
     margin: 15px 0;
 }
 
-.btn-filter {
-    margin: 15px;
-}
-
-.btn-filter:hover, .btn-filter:focus {
-    color: #fff;
-}
-
-.btn-filter, .btn-action {
+#btn-filter, .btn-action {
     background: #812990;
     color: #fff;
     border-radius: 10px;
+    height: 40px;
 }
 
-.map-dashboard .btn-action {
-    display: inline-block;
-    min-width: 98px;
-    width: 40%;
-    height: 40px;
-    line-height: 40px;
-    padding: 0;
-    font-size: 16px;
-    margin-bottom: 5px;
+.map-dashboard .control {
+    position: absolute;
+    z-index: 550;
+    top: 15px;
 }
 
 .map-dashboard .control > div {
     display: inline-block;
 }
 
-.map-dashboard .control .map-filter-container {
+.map-dashboard .btn-action:first-child {
+    margin-left: 50px;
+}
+
+.map-dashboard .btn-action {
+    display: inline-block;
+    width: 130px;
+    line-height: 40px;
+    padding: 0;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.map-filter {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    z-index: 500;
+}
+
+#btn-filter:hover, #btn-filter:focus {
+    color: #fff;
+}
+
+.map-dashboard .map-filter-container {
     display: none;
     position: absolute;
     top: 60px;
     right: 30px;
     border: 1px solid #E9E9E9;
     padding: 10px;
-    z-index: 1000;
+    z-index: 500;
     background: #fff;
 }
 
@@ -387,6 +394,10 @@ label {
     text-align: center;
 }
 
+.map-dashboard .table-cell:first-child {
+    width: 20%;
+}
+
 .map-dashboard .table-cell:last-child {
     vertical-align: middle;
     width: 10%;
@@ -398,7 +409,7 @@ label {
 }
 
 .map-dashboard .booking-info {
-    width: 60%;
+    width: 50%;
     font-size: 16px;
 }
 
@@ -466,6 +477,13 @@ label {
 #booking-enquires h4 {
     margin-bottom: 10px;
 }
+
+.alert-box {
+    height: 60px;
+}
+
+
+
 #main{background-color: #fff;}
 input{border-radius: 6px;}
 ul,li{list-style: none;}
