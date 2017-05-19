@@ -3776,6 +3776,22 @@ angular.module('app').directive('toggleShortcut', function($log,$timeout) {
 })
 'use strict';
 
+angular.module('app.home').directive('bookingRecords', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'app/map-dashboard/views/booking-records.tpl.html'
+  };
+});
+'use strict';
+
+angular.module('app.home').directive('selectedRecords', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'app/map-dashboard/views/selected-record.tpl.html'
+  };
+});
+'use strict';
+
 angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBookingRecord', '$sce', function($scope, customerBookingRecord, $sce) {
     //Change status button color in map filter
     $scope.selectStatus = function() {
@@ -3835,13 +3851,18 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
     }
         
     //Mark as friend
+    $scope.markAsFriendBtn = "Mark as friend";
     $scope.markAsFriend = function() {
         var input = jQuery('#name-on-map');
         var text = input.val();
 
-        if (text!="(friend)") {
+        if (text && text.indexOf("(friend)") < 0) {
             input.val(text + " (friend)");
-        };
+            $scope.markAsFriendBtn = "Remove friend";
+        } else { 
+            input.val(text.replace(" (friend)", ""));
+            $scope.markAsFriendBtn = "Mark as friend";
+        }
         
     };
 
@@ -3876,7 +3897,7 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
         $.smallBox({
             title: "Ding Dong!",
             content: "<div class='alert-box'>Someone's at the door...shall one get it sir?</div",
-            color: "#296191",
+            color: "#C79121",
             //timeout: 8000,
             icon: "fa fa-bell swing animated"
         });
@@ -3884,22 +3905,6 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
 
 }]);
 
-'use strict';
-
-angular.module('app.home').directive('bookingRecords', function() {
-  return {
-    restrict: 'E',
-    templateUrl: 'app/map-dashboard/views/booking-records.tpl.html'
-  };
-});
-'use strict';
-
-angular.module('app.home').directive('selectedRecords', function() {
-  return {
-    restrict: 'E',
-    templateUrl: 'app/map-dashboard/views/selected-record.tpl.html'
-  };
-});
 "use strict";
 
 angular.module('app.home').factory('customerBookingRecord', ['$http', function($http) {

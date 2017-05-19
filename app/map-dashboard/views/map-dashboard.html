@@ -125,8 +125,8 @@
                         <a class="btn btn-action txt-color-white" data-toggle="modal" data-target="#register-guest"><i class="fa fa-chain-broken"></i> Check-in</a>
                         <a class="btn btn-action txt-color-white" data-toggle="modal" data-target="#check-out"><i class="fa fa-sign-out"></i> Check-out</a>
                         <button type="button" ng-click="eg5()" class="btn btn-default">
-                    Alert
-                </button>
+                            Alert
+                        </button>
                     </div>
                 </div>
                 <div class="map-filter">
@@ -229,12 +229,12 @@
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <label>Name display on map</label>
-                                                    <input id="name-on-map" class="form-control" placeholder="Customer name" type="text" value="{{booking[0].customer.name}}">
+                                                    <label>Name on map</label>
+                                                    <input id="name-on-map" class="form-control" placeholder="Customer name" type="text" value="{{booking[0].customer.name || ''}}">
                                                 </div>
                                             </div>
                                             <div class="col-md-2">
-                                                <button class="btn btn-normal" ng-click="markAsFriend()">Mark as friend</button>
+                                                <button class="btn btn-normal" ng-click="markAsFriend()">{{markAsFriendBtn}}</button>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -297,30 +297,12 @@
                         </div>
                     </div>
                     <div ng-if="!(selectedItemCO.handBandId === 'Please Select')">
-                        Customer has friend
-                        <div class="customer-record">
-                            <div class="table-cell">
-                                <span class="booking-number">BK00001</span>
-                                <img id="customer-pic" src="styles/img/avatars/5.png" alt="avatar">
-                            </div>
-                            <div class="table-cell customer-profile">
-                                <div class="customer-name">MRS Johnson</div>
-                                <div class="member-id"><i class="fa fa-id-card-o"></i> 0036688</div>
-                                <div class="mobile"><i class="fa fa-mobile-phone"></i> 12345678</div>
-                                <div class="member-tier"><i class="fa fa-trophy"></i></div>
-                            </div>
-                            <div class="table-cell booking-info">
-                                <div class="booking-time">1:00pm - 2:30pm (1.5 hr)</div>
-                                <div class="booking-treatment">Treatment A</div>
-                                <div class="booking-therapist">Therapist: <span class="booking-therapist-name">THER-LILY LEE</span></div>
-                                <div class="booking-room">Room 18</div>
-                            </div>
-                            <div class="table-cell">
-                                <div id="confirmed">
-                                    <i class="fa fa-check-circle"></i>
-                                </div>
-                            </div>
+                        <div class="name-on-map">
+                            <h2>Name on map: 
+                            {{booking[0].customer.name}}
+                            </h2>
                         </div>
+                        <selected-records></selected-records>
                     </div>
                 </div>
                 <div class="modal-footer">
