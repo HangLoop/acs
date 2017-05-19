@@ -3,7 +3,8 @@ var Point_Lable = [];
 var Point_Icon = [];
 var isShowAllIcon=true;
 //var ServerUrl ="http://innosrc.cn:8889/";
-var ServerUrl="http://localhost:80/";
+//var ServerUrl="http://localhost:80/";
+var ServerUrl="http://localhost:8888/api/";
 
 function loadmap () {
     //绘制地图
@@ -37,7 +38,8 @@ function loadmap () {
 		function getGuestList() {
             $.ajax({
                 type: "Get",
-                url:ServerUrl+"base/all",
+                //url:ServerUrl+"base/all",
+                url:ServerUrl+"base.all.json",
                 data: { t: new Date() },
                 dataType: "json",
                 success: function (data) {
@@ -113,7 +115,7 @@ function loadmap () {
 						    break;
 					    case "Escort": Icon_class = "fa fa-bookmark fa-fw";
                             break;
-                        case "Maid": Icon_class = "fa fa-shopping-basket fa-fw";
+                        case "Maid": Icon_class = "fa fa-shopping-basket fa-fw txt-color-blue";
                             break;
 						case "Therapist": Icon_class = "fa fa-heart-o fa-fw";
 						    break;
@@ -283,7 +285,8 @@ function loadmap () {
    function reloadmessageRecived(){
 		 $.ajax({
                 type: "Get",
-                url: ServerUrl+"notification/byTime",
+                //url: ServerUrl+"notification/byTime",
+                url: ServerUrl+"notification.byTime.json",
                 dataType: "json",
 				data:{time:lastnowtime},
                 success: function (data) {
@@ -326,7 +329,8 @@ function loadmap () {
    function GetCustomerInfomation(event){									
         $.ajax({
                 type: "Get",
-                url: ServerUrl+"guest/list",
+                //url: ServerUrl+"guest/list",
+                url: ServerUrl+"guest.list.json",
                 dataType: "json",
 				data:{time:lastnowtime},
                 success: function (data) {

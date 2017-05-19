@@ -111,4 +111,8 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
         });
     };
 
+    $scope.fillPath = function() {
+        $(".leaflet-interactive:nth-child(4)").attr("fill", "green");
+    };
+    $scope.fillPath();
 }]);

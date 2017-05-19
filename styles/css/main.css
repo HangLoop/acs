@@ -23,12 +23,6 @@
     box-sizing: border-box;
 }
 
-
-
-#header {
-    text-align: center;
-}
-
 #header #weather {
     margin: 0 50px;
 }
@@ -89,6 +83,7 @@
 
 .all-data p {
     font-size: 22px;
+    font-weight: bold;
 }
 
 .map-dashboard .ui-datepicker {
@@ -107,13 +102,17 @@
     background: #FFF;
 }
 
+.map-dashboard .date .form-control {
+    ta
+}
+
 .map-dashboard .ui-widget-header a {
     color: #812990;
     line-height: 100%;
     font-size: 18px;
 }
 
-.map-dashboard header {
+header {
     color: #812990;
 }
 
@@ -121,7 +120,7 @@
     margin: 0;
 }
 
-.map-dashboard header h2 {
+header h2 {
     text-align: left;
     margin: 15px 0;
 }
@@ -180,7 +179,7 @@
 }
 
 .map-dashboard .map-filter-container > div {
-    margin-left: 20px;
+    margin: 0 30px;
     display: inline-block;
     float: left;
 }
@@ -201,7 +200,10 @@
     color: #333;
     border: 1px solid #ccc;
     white-space: normal;
-    width: ;
+}
+
+.map-dashboard .map-filter-container .room-type ul li a {
+    width: 150px;
 }
 
 .map-dashboard .map-filter-container ul li .btn-selected {

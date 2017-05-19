@@ -23,49 +23,40 @@
                 <div class="all-data">
                     <table class="table">
                         <tbody>
-                            <tr class="major-rm-data">
+                            <tr class="major-rm-data txt-color-green">
                                 <td>
-                                    <h2><i class="fa fa-street-view txt-color-green"></i></h2></td>
+                                    <h2><i class="fa fa-street-view"></i></h2></td>
                                 <td>
-                                    <h2> occupied<br>room</h2></td>
+                                    <h2>occupied<br>room</h2></td>
                                 <td>
                                     <p>25/85</p>
                                 </td>
                             </tr>
-                            <tr class="major-rm-data">
+                            <tr class="major-rm-data txt-color-orangeDark">
                                 <td>
-                                    <h3><i class="fa fa-check-circle txt-color-orange"></i></h3></td>
+                                    <h3><i class="fa fa-check-circle"></i></h3></td>
                                 <td>
                                     <h3>confirmed<br>booking</h3></td>
                                 <td>
                                     <p>30</p>
                                 </td>
                             </tr>
-                            <tr class="other-rm-data">
+                            <tr class="other-rm-data txt-color-teal">
                                 <td>
-                                    <h3><i class="fa fa-toggle-on txt-color-blue"></i></h3></td>
+                                    <h3><i class="fa fa-thumbs-up"></i></h3></td>
                                 <td>
                                     <h3>available<br>room</h3></td>
                                 <td>
                                     <p>55</p>
                                 </td>
                             </tr>
-                            <tr class="other-rm-data">
+                            <tr class="other-rm-data txt-color-redLight">
                                 <td>
-                                    <h3><i class="fa fa-toggle-off txt-color-red"></i></h3></td>
+                                    <h3><i class="fa fa-ban"></i></h3></td>
                                 <td>
                                     <h3> not available<br>room</h3></td>
                                 <td>
                                     <p>6</p>
-                                </td>
-                            </tr>
-                            <tr class="other-rm-data">
-                                <td>
-                                    <h3><i class="fa fa-ban txt-color-redLight"></i></h3></td>
-                                <td>
-                                    <h3>maintenance</h3></td>
-                                <td>
-                                    <p>1</p>
                                 </td>
                             </tr>
                             <tr>
@@ -73,9 +64,9 @@
                                 <td></td>
                                 <td></td>
                             </tr>
-                            <tr class="locker-data">
+                            <tr class="locker-data txt-color-teal">
                                 <td>
-                                    <h3><i class="fa fa-lock txt-color-teal"></i></h3></td>
+                                    <h3><i class="fa fa-lock"></i></h3></td>
                                 <td>
                                     <h3>locker<br>available</h3></td>
                                 <td>
@@ -87,18 +78,18 @@
                                 <td></td>
                                 <td></td>
                             </tr>
-                            <tr class="therapist-data">
+                            <tr class="therapist-data txt-color-red">
                                 <td>
-                                    <h3><i class="fa fa-user-circle txt-color-red"></i></h3></td>
+                                    <h3><i class="fa fa-user-circle"></i></h3></td>
                                 <td>
                                     <h3>booked<br>therapist</h3></td>
                                 <td>
                                     <p>33</p>
                                 </td>
                             </tr>
-                            <tr class="therapist-data">
+                            <tr class="therapist-data txt-color-green">
                                 <td>
-                                    <h3><i class="fa fa-users txt-color-green"></i></h3></td>
+                                    <h3><i class="fa fa-users"></i></h3></td>
                                 <td>
                                     <h3>available<br>therapist</h3></td>
                                 <td>
@@ -125,7 +116,7 @@
                         <a class="btn btn-action txt-color-white" data-toggle="modal" data-target="#register-guest"><i class="fa fa-chain-broken"></i> Check-in</a>
                         <a class="btn btn-action txt-color-white" data-toggle="modal" data-target="#check-out"><i class="fa fa-sign-out"></i> Check-out</a>
                         <button type="button" ng-click="eg5()" class="btn btn-default">
-                            Alert
+                            Alert (for demo)
                         </button>
                     </div>
                 </div>
@@ -133,7 +124,7 @@
                     <a id="btn-filter" href-void class="btn btn-lg"> <i class="fa fa-map-marker"></i> Display MAP by</a>
                 </div>
                 <div class="map-filter-container">
-                    <div class="map-guest-status">
+                    <div class="zone-type">
                         <ul>
                             <li>Zone</li>
                             <li><a href-void onclick='showIcon(this)' class="btn btn-normal">L1</a></li>
@@ -142,20 +133,23 @@
                             <li><a href-void onclick='showIcon(this)' class="btn btn-normal">R2</a></li>
                         </ul>
                     </div>
-                    <div class="map-staff-status">
+                    <div class="room-type">
                         <ul>
-                            <li>Staff</li>
-                            <li><i class="fa fa-bookmark fa-fw"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Escort</a></li>
-                            <li><i class="fa fa-shopping-basket fa-fw"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Maid</a></li>
-                            <li><i class="fa fa-heart-o fa-fw"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Therapist</a></li>
+                            <li>Room type</li>
+                            <li><i class="fa fa-street-view txt-color-green"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Occupied<br>Room</a></li>
+                            <li><i class="fa fa-check-circle txt-color-orangeDark"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Confirmed<br>Booking</a></li>
+                            <li><i class="fa fa-thumbs-up txt-color-teal"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Available<br>Room</a></li>
+                            <li><i class="fa fa-ban txt-color-redLight"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Not Available<br>Room</a></li>
                         </ul>
                     </div>
-                    <div class="map-machine-status">
+                    <div class="beacon-type">
                         <ul>
-                            <li>Equpiment</li>
-                            <li><i class="fa fa-cog fa-fw"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Treatment Machines</a></li>
-                            <li><i class="fa fa-cog fa-fw txt-color-red"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Theraphy Machines</a></li>
-                            <li><i class="fa fa-cog fa-fw txt-color-green"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Cleaning Machines</a></li>
+                            <li>Beacon type</li>
+                            <li><i class="fa fa-user-circle fa-fw txt-color-magenta"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Member</a></li>
+                            <li><i class="fa fa-bookmark fa-fw txt-color-yellow"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Escort</a></li>
+                            <li><i class="fa fa-shopping-basket fa-fw txt-color-blue"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Maid</a></li>
+                            <li><i class="fa fa-heart-o fa-fw txt-color-pink"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Therapist</a></li>
+                            <li><i class="fa fa-cog fa-fw txt-color-blueLight"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Equipment</a></li>
                         </ul>
                     </div>
                 </div>
