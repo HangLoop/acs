@@ -118,6 +118,9 @@
                         <button type="button" ng-click="eg5()" class="btn btn-default">
                             Alert (for demo)
                         </button>
+                        <button type="button" ng-click="fillPath()" class="btn btn-default">
+                            fill rm 56
+                        </button>
                     </div>
                 </div>
                 <div class="map-filter">
@@ -136,7 +139,7 @@
                     <div class="room-type">
                         <ul>
                             <li>Room type</li>
-                            <li><i class="fa fa-street-view txt-color-green"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Occupied<br>Room</a></li>
+                            <li><i class="fa fa-street-view txt-color-green"></i><a href-void ng-click="showOccupied()" class="btn btn-normal">Occupied<br>Room</a></li>
                             <li><i class="fa fa-check-circle txt-color-orangeDark"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Confirmed<br>Booking</a></li>
                             <li><i class="fa fa-thumbs-up txt-color-teal"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Available<br>Room</a></li>
                             <li><i class="fa fa-ban txt-color-redLight"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Not Available<br>Room</a></li>

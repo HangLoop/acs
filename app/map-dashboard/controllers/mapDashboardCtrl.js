@@ -49,15 +49,16 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
 
     //Select all
     $scope.toggleAll = function() {
-     var toggleStatus = $scope.isAllSelected;
-     angular.forEach($scope.booking, function(itm){ itm.selected = toggleStatus; });
-   
+        var toggleStatus = $scope.isAllSelected;
+        angular.forEach($scope.booking, function(itm) { itm.selected = toggleStatus; });
+
     }
-      
-    $scope.optionToggled = function(){
-        $scope.isAllSelected = $scope.booking.every(function(itm){ return itm.selected; })
+
+    $scope.optionToggled = function() {
+        $scope.isAllSelected = $scope.booking.every(function(itm) {
+            return itm.selected; })
     }
-        
+
     //Mark as friend
     $scope.markAsFriendBtn = "Mark as friend";
     $scope.markAsFriend = function() {
@@ -67,13 +68,12 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
         if (text && text.indexOf("(friend)") < 0) {
             input.val(text + " (friend)");
             $scope.markAsFriendBtn = "Remove friend";
-        } else { 
+        } else {
             input.val(text.replace(" (friend)", ""));
             $scope.markAsFriendBtn = "Mark as friend";
         }
-        
-    };
 
+    };
 
     //Hand Band ID and locker
     $scope.handBandLocker = [{
@@ -112,7 +112,25 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
     };
 
     $scope.fillPath = function() {
+        if ($(".leaflet-interactive:nth-child(4)").attr('fill')) {
+        $(".leaflet-interactive:nth-child(4)").removeAttr("fill");
+    } else {
         $(".leaflet-interactive:nth-child(4)").attr("fill", "green");
+    }
     };
     $scope.fillPath();
+
+
+
+
+    $scope.showOccupied = function() {
+        $('.leaflet-marker-icon').each(function() {
+            var rmID = $('span', this).text().toLowerCase().replace(" ", "_");;
+            $(this).attr('id', rmID);
+        });
+        $('#vip_rm1, #staff_room').toggleClass('txt-color-red');
+    }
+
+
+
 }]);
