@@ -67,10 +67,6 @@
     font-size: 18px;
 }
 
-.all-data .major-rm-data h2 {
-    font-size: 20px;
-}
-
 .all-data .table>tbody>tr>td {
     border: 0;
     vertical-align: middle;
@@ -239,7 +235,7 @@ header h2 {
     font-size: 18px;
     height: 32px;
     min-width: 98px;
-    background: #812990;
+    background: #812990!important;
     color: #FFF;
     text-align: center;
     line-height: 100%;
@@ -247,7 +243,6 @@ header h2 {
 
 .map-dashboard .modal #check-in .btn-normal {
     float: right;
-    width: 50%;
 }
 
 .map-dashboard .modal #check-in .btn-normal,
@@ -369,20 +364,30 @@ label {
     font-size: 20px
 }
 
-.map-dashboard .searching-result h4 {
+.searching-result {
+    overflow-y: scroll;
+    max-height: 500px;
+    clear: both;
+}
+
+#pairing .today-bookings {
     margin: 10px 0;
 }
 
 .searching-result label {
-    float: right;
+    cursor: pointer;
 }
 
-.map-dashboard #today-bookings {
+#check-in h4 {
     margin: 10px 0;
 }
 
-.searching-result h4, .searching-result span {
+#check-in h4, #check-in span {
     display: inline;
+}
+
+#select-all {
+    float: right;
 }
 
 .map-dashboard .table-cell {
@@ -481,9 +486,55 @@ label {
 }
 
 .alert-box {
-    height: 60px;
+    min-height: 60px;
 }
 
+.rmOccupied {
+    color: #0A5F38!important;
+}
+
+.rmConfirmed {
+    color: #866144!important;
+}
+
+.rmAvailable {
+    color: #07A0D9!important;
+}
+
+.rmNotAvailable {
+    color: #D9242B!important;
+}
+
+.rmOccupied-sel {
+    color: #0A5F38!important;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.rmConfirmed-sel {
+    color: #866144!important;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.rmAvailable-sel {
+    color: #07A0D9!important;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.rmNotAvailable-sel {
+    color: #D9242B!important;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.rm-booking-number {
+    font-size: 14px;
+    color: #fff;
+    text-shadow: none!important;
+    font-weight: bold;
+}
 
 
 #main{background-color: #fff;}

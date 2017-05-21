@@ -7,7 +7,8 @@
             "name": "MRS Johnson",
             "mobile": "12345678",
             "id": "591303bc6d56283764ff7d42",
-            "tier": "3"
+            "tier": "3",
+            "mbr_code": 10244105
         },
         "treatment": [
             {
@@ -36,7 +37,8 @@
             "name": "MRS Johnson",
             "mobile": "12345678",
             "id": "591303bc6d56283764ff7d42",
-            "tier": "3"
+            "tier": "3",
+            "mbr_code": 10244105
         },
         "treatment": [
             {
@@ -53,11 +55,144 @@
         "booking": "BK00003",
         "selected": false,
         "customer": {
-            "pic": "styles/img/avatars/5.png",
-            "name": "MRS Johnson",
-            "mobile": "12345678",
-            "id": "591303bc6d56283764ff7d42",
-            "tier": "3"
+            "pic": "styles/img/avatars/4.png",
+            "name": "MRS Cheung",
+            "mobile": "22222222",
+            "id": "591303bc6d56283764ff7d43",
+            "tier": "1",
+            "mbr_code": 10244106
+        },
+        "treatment": [
+            {
+                "start_time": "5:00pm",
+                "end_time": "6:30pm",
+                "duration": "1.5 hr",
+                "treatment": "treatment CCC",
+                "therapist": "ther-lily lee",
+                "room": "room 20"
+            }
+        ]
+    },
+    {
+        "booking": "BK00003",
+        "selected": false,
+        "customer": {
+            "pic": "styles/img/avatars/4.png",
+            "name": "MRS Cheung",
+            "mobile": "22222222",
+            "id": "591303bc6d56283764ff7d43",
+            "tier": "1",
+            "mbr_code": 10244106
+        },
+        "treatment": [
+            {
+                "start_time": "5:00pm",
+                "end_time": "6:30pm",
+                "duration": "1.5 hr",
+                "treatment": "treatment CCC",
+                "therapist": "ther-lily lee",
+                "room": "room 20"
+            }
+        ]
+    },
+    {
+        "booking": "BK00003",
+        "selected": false,
+        "customer": {
+            "pic": "styles/img/avatars/4.png",
+            "name": "MRS Cheung",
+            "mobile": "22222222",
+            "id": "591303bc6d56283764ff7d43",
+            "tier": "1",
+            "mbr_code": 10244106
+        },
+        "treatment": [
+            {
+                "start_time": "5:00pm",
+                "end_time": "6:30pm",
+                "duration": "1.5 hr",
+                "treatment": "treatment CCC",
+                "therapist": "ther-lily lee",
+                "room": "room 20"
+            }
+        ]
+    },
+    {
+        "booking": "BK00003",
+        "selected": false,
+        "customer": {
+            "pic": "styles/img/avatars/4.png",
+            "name": "MRS Cheung",
+            "mobile": "22222222",
+            "id": "591303bc6d56283764ff7d43",
+            "tier": "1",
+            "mbr_code": 10244106
+        },
+        "treatment": [
+            {
+                "start_time": "5:00pm",
+                "end_time": "6:30pm",
+                "duration": "1.5 hr",
+                "treatment": "treatment CCC",
+                "therapist": "ther-lily lee",
+                "room": "room 20"
+            }
+        ]
+    },
+    {
+        "booking": "BK00003",
+        "selected": false,
+        "customer": {
+            "pic": "styles/img/avatars/4.png",
+            "name": "MRS Cheung",
+            "mobile": "22222222",
+            "id": "591303bc6d56283764ff7d43",
+            "tier": "1",
+            "mbr_code": 10244106
+        },
+        "treatment": [
+            {
+                "start_time": "5:00pm",
+                "end_time": "6:30pm",
+                "duration": "1.5 hr",
+                "treatment": "treatment CCC",
+                "therapist": "ther-lily lee",
+                "room": "room 20"
+            }
+        ]
+    },
+    {
+        "booking": "BK00003",
+        "selected": false,
+        "customer": {
+            "pic": "styles/img/avatars/4.png",
+            "name": "MRS Cheung",
+            "mobile": "22222222",
+            "id": "591303bc6d56283764ff7d43",
+            "tier": "1",
+            "mbr_code": 10244106
+        },
+        "treatment": [
+            {
+                "start_time": "5:00pm",
+                "end_time": "6:30pm",
+                "duration": "1.5 hr",
+                "treatment": "treatment CCC",
+                "therapist": "ther-lily lee",
+                "room": "room 20"
+            }
+        ]
+    },
+    {
+        "booking": "BK00003",
+        "selected": false,
+        "customer": {
+            "pic": "styles/img/avatars/4.png",
+            "name": "MRS Cheung",
+            "mobile": "22222222",
+            "id": "591303bc6d56283764ff7d43",
+            "tier": "1",
+            "mbr_code": 10244106
         },
         "treatment": [
             {

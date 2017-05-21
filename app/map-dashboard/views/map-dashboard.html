@@ -23,7 +23,7 @@
                 <div class="all-data">
                     <table class="table">
                         <tbody>
-                            <tr class="major-rm-data txt-color-green">
+                            <tr class="rmOccupied">
                                 <td>
                                     <h2><i class="fa fa-street-view"></i></h2></td>
                                 <td>
@@ -32,7 +32,7 @@
                                     <p>25/85</p>
                                 </td>
                             </tr>
-                            <tr class="major-rm-data txt-color-orangeDark">
+                            <tr class="rmConfirmed">
                                 <td>
                                     <h3><i class="fa fa-check-circle"></i></h3></td>
                                 <td>
@@ -41,7 +41,7 @@
                                     <p>30</p>
                                 </td>
                             </tr>
-                            <tr class="other-rm-data txt-color-teal">
+                            <tr class="rmAvailable">
                                 <td>
                                     <h3><i class="fa fa-thumbs-up"></i></h3></td>
                                 <td>
@@ -50,7 +50,7 @@
                                     <p>55</p>
                                 </td>
                             </tr>
-                            <tr class="other-rm-data txt-color-redLight">
+                            <tr class="rmNotAvailable">
                                 <td>
                                     <h3><i class="fa fa-ban"></i></h3></td>
                                 <td>
@@ -64,7 +64,7 @@
                                 <td></td>
                                 <td></td>
                             </tr>
-                            <tr class="locker-data txt-color-teal">
+                            <tr class="txt-color-teal">
                                 <td>
                                     <h3><i class="fa fa-lock"></i></h3></td>
                                 <td>
@@ -78,7 +78,7 @@
                                 <td></td>
                                 <td></td>
                             </tr>
-                            <tr class="therapist-data txt-color-red">
+                            <tr class="txt-color-red">
                                 <td>
                                     <h3><i class="fa fa-user-circle"></i></h3></td>
                                 <td>
@@ -87,7 +87,7 @@
                                     <p>33</p>
                                 </td>
                             </tr>
-                            <tr class="therapist-data txt-color-green">
+                            <tr class="txt-color-green">
                                 <td>
                                     <h3><i class="fa fa-users"></i></h3></td>
                                 <td>
@@ -119,12 +119,15 @@
                             Alert (for demo)
                         </button>
                         <button type="button" ng-click="fillPath()" class="btn btn-default">
-                            fill rm 56
+                            fill rm 56 (for demo)
+                        </button>
+                        <button type="button" ng-click="addBookingNo()" class="btn btn-default">
+                            Add booking No (for demo)
                         </button>
                     </div>
                 </div>
                 <div class="map-filter">
-                    <a id="btn-filter" href-void class="btn btn-lg"> <i class="fa fa-map-marker"></i> Display MAP by</a>
+                    <a id="btn-filter" href-void ng-click="filterPopup()" class="btn btn-lg"> <i class="fa fa-map-marker"></i> Display MAP by</a>
                 </div>
                 <div class="map-filter-container">
                     <div class="zone-type">
@@ -139,10 +142,10 @@
                     <div class="room-type">
                         <ul>
                             <li>Room type</li>
-                            <li><i class="fa fa-street-view txt-color-green"></i><a href-void ng-click="showOccupied()" class="btn btn-normal">Occupied<br>Room</a></li>
-                            <li><i class="fa fa-check-circle txt-color-orangeDark"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Confirmed<br>Booking</a></li>
-                            <li><i class="fa fa-thumbs-up txt-color-teal"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Available<br>Room</a></li>
-                            <li><i class="fa fa-ban txt-color-redLight"></i><a href-void onclick='showIcon(this)' class="btn btn-normal">Not Available<br>Room</a></li>
+                            <li><i class="fa fa-street-view rmOccupied"></i><a href-void ng-click="showOccupied()" class="btn btn-normal">Occupied<br>Room</a></li>
+                            <li><i class="fa fa-check-circle rmConfirmed"></i><a href-void ng-click="showConfirmed()" class="btn btn-normal">Confirmed<br>Booking</a></li>
+                            <li><i class="fa fa-thumbs-up rmAvailable"></i><a href-void ng-click="showAvailableRm()" class="btn btn-normal">Available<br>Room</a></li>
+                            <li><i class="fa fa-ban rmNotAvailable"></i><a href-void ng-click="showNotAvailableRm()" class="btn btn-normal">Not Available<br>Room</a></li>
                         </ul>
                     </div>
                     <div class="beacon-type">
@@ -204,24 +207,29 @@
                                             </section>
                                         </div>
                                     </form>
+                                    <h4>Today's Booking Records</h4>
+                                    <label id="select-all"><span>Select all <input type="checkbox" ng-click="toggleAll()" ng-model="isAllSelected"></span></label>
                                     <div class="searching-result">
-                                        <h4>Today's Booking Records</h4>
-                                        <label><span>Select all <input type="checkbox" ng-click="toggleAll()" ng-model="isAllSelected"></span></label>
                                         <booking-records></booking-records>
                                     </div>
+                                    <a data-toggle="collapse" data-parent="#register-guest-accordion" class="btn btn-normal" href="#pairing">
+                                            Next
+                                        </a>
                                 </div>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4 class="panel-title"><a data-toggle="collapse" href="#pairing" data-parent="#register-guest-accordion" class="collapsed"><span>2</span> Pair Handband & Locker</a></h4>
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#register-guest-accordion" class="collapsed" href="#pairing"><span>2</span> Pair Handband & Locker</a></h4>
                             </div>
                             <div id="pairing" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <!--<div class="selected-record-placeholder" ng-if="!enableSelectedRecords">
                                         <p>Please search and select booking record(s) from Check-in</p>
                                     </div>-->
+                                    <div class="searching-result">
                                     <selected-records></selected-records>
+                                    </div>
                                     <div class="handband-and-locker-info">
                                         <div class="row">
                                             <div class="col-md-4">

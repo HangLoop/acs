@@ -56,7 +56,8 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
 
     $scope.optionToggled = function() {
         $scope.isAllSelected = $scope.booking.every(function(itm) {
-            return itm.selected; })
+            return itm.selected;
+        })
     }
 
     //Mark as friend
@@ -91,46 +92,72 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
         $scope.selectedHandBand = true;
     };
 
-    //Pop-up map filter
-    $scope.filterPopup = function() {
-        jQuery('#btn-filter').click(function() {
-            jQuery('.map-filter-container').toggle();
-        });
-    }
-    $scope.filterPopup();
-
     //alert box
     $scope.eg5 = function() {
 
         $.smallBox({
-            title: "Ding Dong!",
-            content: "<div class='alert-box'>Someone's at the door...shall one get it sir?</div",
+            title: "Warning!",
+            content: "<div class='alert-box'>Member go inside Private Room!</div",
             color: "#C79121",
             //timeout: 8000,
             icon: "fa fa-bell swing animated"
         });
     };
 
-    $scope.fillPath = function() {
-        if ($(".leaflet-interactive:nth-child(4)").attr('fill')) {
-        $(".leaflet-interactive:nth-child(4)").removeAttr("fill");
-    } else {
-        $(".leaflet-interactive:nth-child(4)").attr("fill", "green");
-    }
-    };
-    $scope.fillPath();
-
-
-
-
-    $scope.showOccupied = function() {
+    //Map filter pop-up and assign ID to the room
+    $scope.filterPopup = function() {
+        jQuery('.map-filter-container').toggle();
         $('.leaflet-marker-icon').each(function() {
-            var rmID = $('span', this).text().toLowerCase().replace(" ", "_");;
+            var rmID = $("span:contains('Rm')", this).text().toLowerCase().replace(" ", "_");;
             $(this).attr('id', rmID);
         });
-        $('#vip_rm1, #staff_room').toggleClass('txt-color-red');
+        console.log("assing ID !");
     }
 
+    $scope.fillPath = function() {
+        if ($(".leaflet-interactive:nth-child(4)").attr("fill") === "#BFE7E7") {
+            $(".leaflet-interactive:nth-child(4)").attr("fill", "green");
+        } else {
+            $(".leaflet-interactive:nth-child(4)").attr("fill", "#BFE7E7");
+        }
+        
+
+    };
+    
+    $scope.addBookingNo = function() {
+        $("<span class='rm-booking-number'>15</span><br>").insertBefore(".leaflet-marker-icon span:contains('Rm')"); 
+    }
+
+    //Room type data
+    $scope.occupiedRm = ['vip_rm1', 'vvip_rm2', 'vvip_rm3', 'vvip_rm4', 'vvip_rm5'];
+    $scope.confirmedBk = ['rm6', 'rm7', 'rm14', 'vvip_rm1'];
+    $scope.availableRm = ['rm20', 'rm21', 'rm22', 'rm23'];
+    $scope.notAvailableRm = ['rm1','rm2','rm3'];
+
+    //Show selected room type
+    $scope.showOccupied = function() {
+        $('#' + $scope.occupiedRm.join(',#')).toggleClass('rmOccupied-sel');
+    }
+    $scope.showConfirmed = function() {
+        $('#' + $scope.confirmedBk.join(',#')).toggleClass('rmConfirmed-sel');
+    }
+    $scope.showAvailableRm = function() {
+        $('#' + $scope.availableRm.join(',#')).toggleClass('rmAvailable-sel');
+    }
+    $scope.showNotAvailableRm = function() {
+        $('#' + $scope.notAvailableRm.join(',#')).toggleClass('rmNotAvailable-sel');
+    }
+
+
+    //Validate Booking record mbr_code
+    $scope.validSelectedBk = function() {
+        
+    }
 
 
 }]);
+
+/*
+<span>Rm49</span>
+<br><span style="font-size:20px">10</span></div>
+*/
