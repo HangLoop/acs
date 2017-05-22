@@ -51,7 +51,6 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
     $scope.toggleAll = function() {
         var toggleStatus = $scope.isAllSelected;
         angular.forEach($scope.booking, function(itm) { itm.selected = toggleStatus; });
-
     }
 
     $scope.optionToggled = function() {
@@ -97,7 +96,7 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
 
         $.smallBox({
             title: "Warning!",
-            content: "<div class='alert-box'>Member go inside Private Room!</div",
+            content: "<div class='alert-box'>Member stay inside Private Room!</div",
             color: "#C79121",
             //timeout: 8000,
             icon: "fa fa-bell swing animated"
@@ -111,7 +110,6 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
             var rmID = $("span:contains('Rm')", this).text().toLowerCase().replace(" ", "_");;
             $(this).attr('id', rmID);
         });
-        console.log("assing ID !");
     }
 
     $scope.fillPath = function() {
@@ -120,19 +118,24 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
         } else {
             $(".leaflet-interactive:nth-child(4)").attr("fill", "#BFE7E7");
         }
-        
-
     };
-    
+
+    //Booking Number
+    $scope.bookingNumber = {
+        'rm1': 5,
+        'rm2': 6
+    }
+
+    //Display booking number in front of the room name, assume no bookings there 
     $scope.addBookingNo = function() {
-        $("<span class='rm-booking-number'>15</span><br>").insertBefore(".leaflet-marker-icon span:contains('Rm')"); 
+        $("<span class='rm-booking-number'>" + 0 + "</span><br>").insertBefore(".leaflet-marker-icon span:contains('Rm')");
     }
 
     //Room type data
     $scope.occupiedRm = ['vip_rm1', 'vvip_rm2', 'vvip_rm3', 'vvip_rm4', 'vvip_rm5'];
     $scope.confirmedBk = ['rm6', 'rm7', 'rm14', 'vvip_rm1'];
     $scope.availableRm = ['rm20', 'rm21', 'rm22', 'rm23'];
-    $scope.notAvailableRm = ['rm1','rm2','rm3'];
+    $scope.notAvailableRm = ['rm1', 'rm2', 'rm3'];
 
     //Show selected room type
     $scope.showOccupied = function() {
@@ -148,12 +151,38 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
         $('#' + $scope.notAvailableRm.join(',#')).toggleClass('rmNotAvailable-sel');
     }
 
+    //Toggle collapse
+    $scope.toggleCol = function() {
+        $('.panel-collapse').collapse('toggle');
+    }
 
     //Validate Booking record mbr_code
     $scope.validSelectedBk = function() {
-        
-    }
+        var init;
+        var notSel = 0;
 
+        for (var i = 0; i < $scope.booking.length; i++) {
+
+            if (!$scope.booking[i].selected) {
+                notSel += 1;
+            }
+            if (notSel === $scope.booking.length) {
+                alert("Please select booking record(s)");
+                return;
+            }
+
+            if ($scope.booking[i].selected) {
+                if (!init) {
+                    init = $scope.booking[i];
+                } else if (init.customer.mbr_code !== $scope.booking[i].customer.mbr_code) {
+                    alert("Please select booking records of same member!");
+                    return;
+                }
+            }
+
+        }
+        $scope.toggleCol();
+    }
 
 }]);
 

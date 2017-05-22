@@ -4,29 +4,31 @@
                 class="fa fa-reorder"></i></a> </span>
     </div>-->
     <div class="pull-left">
-        <h2 id="header-date">{{ today | date : "d MMMM y, EEE" }}</h2>
-        <h2 id="header-time">{{ clock | date :  "h:mm:ss a" }}</h2>
     </div>
     <div class="logo">
         <img src="styles/img/asana_logo.png" alt="ASANA HK" height="50">
     </div>
-    <!--<div id="weather">
-        <h2><i class="fa fa-cloud" aria-hidden="true"></i> 27°C</h2>
-    </div>-->
     
-        <div class="pull-right">
-            <div id="logo-group">
-                <!--<span id="logo"> <img src="styles/img/asana_logo.png" alt="ASANA HK"> </span>-->
-                <!-- Note: The activity badge color changes when clicked and resets the number to 0
+
+    <div class="pull-right">
+        <h2 id="header-date">{{ today | date : "d MMMM y, EEE" }}</h2>
+        <h2 id="header-time">{{ clock | date :  "h:mm:ss a" }}</h2>
+        <div id="weather">
+        <h2>UV 3-5</h2>
+        <h2><i class="fa fa-cloud" aria-hidden="true"></i>Cloudy</h2>
+        <h2>27°C</h2>
+        </div>
+        <div id="logo-group">
+            <!--<span id="logo"> <img src="styles/img/asana_logo.png" alt="ASANA HK"> </span>-->
+            <!-- Note: The activity badge color changes when clicked and resets the number to 0
     Suggestion: You may want to set a flag when this happens to tick off all checked messages / notifications -->
-                <span id="activity" class="activity-dropdown" activities-dropdown-toggle> 
+            <span id="activity" class="activity-dropdown" activities-dropdown-toggle> 
             <i class="fa fa-bell"></i> 
             <b class="badge bg-color-red">21</b> 
         </span>
-                <div smart-include="app/map-dashboard/views/activities.html"></div>
-            </div>
+            <div smart-include="app/map-dashboard/views/activities.html"></div>
         </div>
-    
+    </div>
     <!-- fullscreen button -->
     <!--<div id="fullscreen" class="btn-header transparent pull-right">
         <span> <a full-screen title="Full Screen"><i

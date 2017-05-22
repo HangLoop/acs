@@ -25,11 +25,13 @@
 
 #header #weather {
     margin: 0 50px;
+    display: inline-block;
 }
 
 #header h2 {
     line-height: 49px;
     margin: 0 20px;
+    display: inline-block;
 }
 
 #header .logo {
@@ -44,6 +46,14 @@
     display: inline-block;
     margin-left: 30px;
     color: #812990;
+}
+
+#logo-group {
+    display: inline-block;
+}
+
+.notification .chat-body  {
+    border: 0;
 }
 
 #hide-menu {
@@ -370,7 +380,7 @@ label {
     clear: both;
 }
 
-#pairing .today-bookings {
+#pairing .today-bookings, #check-out .today-bookings  {
     margin: 10px 0;
 }
 

@@ -101,10 +101,7 @@
                 </div>
             </div>
         </div>
-        <!-- Map filters -->
-        <article class="col-sm-10 col-md-10 control">
-        </article>
-        <!--End map filters-->
+
         <!-- Beeacon map -->
         <article class="col-sm-12 col-md-12 col-lg-10 map">
             <div style="width:100%;height:850px;" id="mapContainer">
@@ -122,7 +119,7 @@
                             fill rm 56 (for demo)
                         </button>
                         <button type="button" ng-click="addBookingNo()" class="btn btn-default">
-                            Add booking No (for demo)
+                            Display booking No. (for demo)
                         </button>
                     </div>
                 </div>
@@ -178,7 +175,7 @@
                     <div class="panel-group smart-accordion-default" id="register-guest-accordion">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#register-guest-accordion" href="#check-in"><span>1</span> Select Booking Record(s)</a></h4>
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#register-guest-accordion" ng-click="toggleCol()"><span>1</span> Select Booking Record(s)</a></h4>
                             </div>
                             <div id="check-in" class="panel-collapse collapse in">
                                 <div class="panel-body">
@@ -212,7 +209,7 @@
                                     <div class="searching-result">
                                         <booking-records></booking-records>
                                     </div>
-                                    <a data-toggle="collapse" data-parent="#register-guest-accordion" class="btn btn-normal" href="#pairing">
+                                    <a data-toggle="collapse" data-parent="#register-guest-accordion" class="btn btn-normal" ng-click="validSelectedBk()">
                                             Next
                                         </a>
                                 </div>
@@ -220,7 +217,7 @@
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#register-guest-accordion" class="collapsed" href="#pairing"><span>2</span> Pair Handband & Locker</a></h4>
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#register-guest-accordion"><span>2</span> Pair Handband & Locker</a></h4>
                             </div>
                             <div id="pairing" class="panel-collapse collapse">
                                 <div class="panel-body">
