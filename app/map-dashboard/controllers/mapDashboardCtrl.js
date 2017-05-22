@@ -112,20 +112,6 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
         });
     }
 
-    $scope.fillPath = function() {
-        if ($(".leaflet-interactive:nth-child(4)").attr("fill") === "#BFE7E7") {
-            $(".leaflet-interactive:nth-child(4)").attr("fill", "green");
-        } else {
-            $(".leaflet-interactive:nth-child(4)").attr("fill", "#BFE7E7");
-        }
-    };
-
-    //Booking Number
-    $scope.bookingNumber = {
-        'rm1': 5,
-        'rm2': 6
-    }
-
     //Display booking number in front of the room name, assume no bookings there 
     $scope.addBookingNo = function() {
         $("<span class='rm-booking-number'>" + 0 + "</span><br>").insertBefore(".leaflet-marker-icon span:contains('Rm')");
@@ -185,8 +171,3 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
     }
 
 }]);
-
-/*
-<span>Rm49</span>
-<br><span style="font-size:20px">10</span></div>
-*/
