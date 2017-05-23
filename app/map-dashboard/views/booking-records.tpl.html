@@ -9,7 +9,7 @@
                 <div class="customer-name">{{record.customer.name}}</div>
                 <div class="member-id"><i class="fa fa-id-card-o"></i> {{record.customer.id}}</div>
                 <div class="mobile"><i class="fa fa-mobile-phone"></i> {{record.customer.mobile}}</div>
-                <div class="member-tier"><i ng-class="tierClass(record)"></i></div>
+                <div class="member-grading" ng-class="gradingClass(record)">{{record.customer.group_name}}</div>
             </div>
             <div class="table-cell booking-info">
                 <div ng-repeat="info in record.treatment">

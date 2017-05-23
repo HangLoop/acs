@@ -453,13 +453,9 @@ label {
 }
 
 .map-dashboard .customer-record .customer-name,
-.map-dashboard .customer-record .member-tier
+.map-dashboard .customer-record .member-grading
  {
     font-size: 18px;
-}
-
-.map-dashboard .customer-record .member-tier {
-    color: #F01307;
 }
 
 .map-dashboard .booking-therapist-name {

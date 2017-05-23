@@ -26,17 +26,17 @@ angular.module('app.home').controller('mapDashboardCtrl', ['$scope', 'customerBo
         $scope.booking = records;
     });
 
-    //Display Tier's icon according to member's tier
-    $scope.tierClass = function(record) {
-        switch (record.customer.tier) {
-            case 'VVIP':
-                return 'fa fa-trophy';
+    //Display different color according to member's grading
+    $scope.gradingClass = function(record) {
+        switch (record.customer.mbr_group) {
+            case 'DCC19':
+                return 'txt-color-red';
                 break;
-            case 'VIP':
-                return 'fa fa-star-half-o';
+            case 'DCC17':
+                return 'txt-color-orange';
                 break;
             default:
-                return 'fa fa-user-secret';
+                return 'txt-color-magenta';
         }
     };
 
