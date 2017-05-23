@@ -218,11 +218,8 @@
                             </div>
                             <div id="pairing" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    <!--<div class="selected-record-placeholder" ng-if="!enableSelectedRecords">
-                                        <p>Please search and select booking record(s) from Check-in</p>
-                                    </div>-->
                                     <div class="searching-result">
-                                    <selected-records></selected-records>
+                                        <selected-records></selected-records>
                                     </div>
                                     <div class="handband-and-locker-info">
                                         <div class="row">
@@ -301,7 +298,9 @@
                             {{booking[0].customer.name}}
                             </h2>
                         </div>
-                        <selected-records></selected-records>
+                        <div class="searching-result">
+                            <selected-records></selected-records>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">

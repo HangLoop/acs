@@ -381,7 +381,7 @@ label {
 }
 
 #pairing .today-bookings, #check-out .today-bookings  {
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
 
 .searching-result label {

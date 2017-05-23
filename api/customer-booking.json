@@ -98,5 +98,97 @@
                 "room": "room 20"
             }
         ]
+    },
+    {
+        "booking": "BK00003",
+        "selected": false,
+        "customer": {
+            "pic": "styles/img/avatars/1.png",
+            "name": "Dora",
+            "mobile": "22222222",
+            "id": "591303bc6d56283764ff7d43",
+            "group_name": "貴族彩寶石Level 17",
+            "mbr_code": 10244106,
+            "mbr_group": "DCC17"
+        },
+        "treatment": [
+            {
+                "start_time": "5:00pm",
+                "end_time": "6:30pm",
+                "duration": "1.5 hr",
+                "treatment": "treatment CCC",
+                "therapist": "ther-lily lee",
+                "room": "room 20"
+            }
+        ]
+    },
+    {
+        "booking": "BK00003",
+        "selected": false,
+        "customer": {
+            "pic": "styles/img/avatars/1.png",
+            "name": "Dora",
+            "mobile": "22222222",
+            "id": "591303bc6d56283764ff7d43",
+            "group_name": "貴族彩寶石Level 17",
+            "mbr_code": 10244106,
+            "mbr_group": "DCC17"
+        },
+        "treatment": [
+            {
+                "start_time": "5:00pm",
+                "end_time": "6:30pm",
+                "duration": "1.5 hr",
+                "treatment": "treatment CCC",
+                "therapist": "ther-lily lee",
+                "room": "room 20"
+            }
+        ]
+    },
+    {
+        "booking": "BK00003",
+        "selected": false,
+        "customer": {
+            "pic": "styles/img/avatars/1.png",
+            "name": "Dora",
+            "mobile": "22222222",
+            "id": "591303bc6d56283764ff7d43",
+            "group_name": "貴族彩寶石Level 17",
+            "mbr_code": 10244106,
+            "mbr_group": "DCC17"
+        },
+        "treatment": [
+            {
+                "start_time": "5:00pm",
+                "end_time": "6:30pm",
+                "duration": "1.5 hr",
+                "treatment": "treatment CCC",
+                "therapist": "ther-lily lee",
+                "room": "room 20"
+            }
+        ]
+    },
+    {
+        "booking": "BK00003",
+        "selected": false,
+        "customer": {
+            "pic": "styles/img/avatars/1.png",
+            "name": "Dora",
+            "mobile": "22222222",
+            "id": "591303bc6d56283764ff7d43",
+            "group_name": "貴族彩寶石Level 17",
+            "mbr_code": 10244106,
+            "mbr_group": "DCC17"
+        },
+        "treatment": [
+            {
+                "start_time": "5:00pm",
+                "end_time": "6:30pm",
+                "duration": "1.5 hr",
+                "treatment": "treatment CCC",
+                "therapist": "ther-lily lee",
+                "room": "room 20"
+            }
+        ]
     }
 ]
